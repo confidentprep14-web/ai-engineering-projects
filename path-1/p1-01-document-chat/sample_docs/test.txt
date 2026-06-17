@@ -1,0 +1,264 @@
+Notes on Building Reliable Backend Services
+
+These notes collect practical lessons from running backend services in production.
+They cover authentication, caching, rate limiting, logging, testing, and deployment.
+Each section focuses on decisions that matter more than they first appear to.
+
+
+Section 1: Authentication
+
+Most backend services need to know who is calling them before they do anything else.
+Token-based authentication using JWTs has become the default approach for stateless
+APIs. A client logs in once, receives a signed token, and presents that token on every
+subsequent request. The server verifies the signature and trusts the claims inside
+without needing to look anything up in a database.
+
+Tokens expire after 24 hours in most of our services and must be refreshed via the
+/auth/refresh endpoint. Short expiry windows limit the damage a leaked token can do.
+Refresh tokens are stored with a longer lifetime and are revocable, which gives us a
+way to forcibly log a user out even though the access token itself cannot be revoked
+before it expires.
+
+A common mistake is putting too much information inside the JWT payload. Because the
+payload is only signed, not encrypted, anything inside it is readable by the client.
+Sensitive fields like internal role flags or feature entitlements should be looked up
+server-side rather than trusted from the token, unless the token is also encrypted.
+
+Another mistake is skipping signature verification on internal services because "it's
+just internal traffic." Internal networks get compromised too, and a forged token from
+a compromised service can move laterally through every other service that trusts it
+without checking the signature.
+
+Rotating signing keys is something most teams plan for but rarely test. When the day
+comes to rotate a key, you want every service to support multiple valid keys during
+the transition window, identified by a key ID in the token header. Without that, key
+rotation becomes a synchronized deployment across every service at once, which is
+fragile and stressful to coordinate.
+
+Session-based authentication is still the right choice for some systems, particularly
+ones that need to revoke access immediately and reliably. The tradeoff is that the
+server has to maintain state, usually in a shared cache, and every request pays the
+cost of a lookup. JWTs trade that lookup cost for the inability to revoke instantly.
+
+
+Section 2: Caching
+
+Caching is the fastest way to make a slow system feel fast, and the fastest way to
+introduce bugs that are nearly impossible to reproduce. The two hard problems in
+caching are deciding what to cache and deciding when to invalidate it.
+
+A read-through cache sits in front of the database. On a cache miss, the application
+reads from the database, stores the result in the cache, and returns it. On a cache
+hit, the database is never touched. This pattern works well for data that changes
+infrequently relative to how often it's read, like user profile information or
+product catalog entries.
+
+Write-through caching updates the cache at the same time as the database, so reads
+immediately after a write see fresh data. This adds latency to writes in exchange for
+consistency on reads. Write-behind caching defers the database write, which is faster
+but risks losing data if the cache crashes before the write is flushed.
+
+Cache invalidation is where most caching bugs live. Time-based expiry (a TTL) is the
+simplest strategy: data goes stale automatically after a fixed window. The downside is
+that for the length of the TTL, clients may see data that's already wrong. Event-based
+invalidation is more accurate — when the underlying data changes, an explicit
+invalidation message clears the relevant cache entries — but it adds a dependency:
+every code path that writes to the database must also remember to invalidate the
+cache, and forgetting even one path reintroduces stale data silently.
+
+A subtle failure mode is the thundering herd: when a popular cache key expires, many
+concurrent requests miss the cache at the same moment and all hit the database
+simultaneously, sometimes overloading it. Adding jitter to TTLs, or using a lock so
+only one request repopulates the cache while others wait, prevents this.
+
+Caching negative results — the fact that something does not exist — is often
+forgotten. Without it, a request for a nonexistent resource hits the database on
+every single call, because there's nothing to cache. A short TTL on "not found"
+results protects the database from this pattern, sometimes called a cache penetration
+attack when it's triggered deliberately.
+
+
+Section 3: Rate Limiting
+
+Rate limiting protects a service from being overwhelmed, whether the traffic is
+malicious, accidental, or just unexpectedly popular. The simplest implementation is a
+fixed window counter: count requests per client in a fixed time window, and reject
+requests once the count exceeds a threshold. The problem with fixed windows is a burst
+right at the boundary — a client can send the maximum allowed requests at the end of
+one window and the maximum again at the start of the next, doubling the effective rate
+for a brief period.
+
+A sliding window log fixes the boundary problem by tracking the exact timestamp of
+every request and counting how many fall within the trailing window, but this uses
+more memory because every timestamp must be stored. A sliding window counter
+approximates this with much less memory by weighting the current and previous fixed
+windows proportionally to how much of the sliding window overlaps each one.
+
+The token bucket algorithm is the most common choice in practice. Each client has a
+bucket that holds a fixed number of tokens and refills at a steady rate. Every request
+consumes one token; if the bucket is empty, the request is rejected. This naturally
+allows short bursts up to the bucket size while enforcing a steady average rate over
+time, which matches how real traffic behaves better than a strict fixed window.
+
+Where you enforce the limit matters as much as how. Limiting at the edge, before a
+request reaches application servers, protects the most resources but requires the
+edge layer to track per-client state, which usually means a shared store like Redis
+if there is more than one edge node. Limiting deep inside the application is easier to
+implement but wastes resources on requests that get rejected anyway.
+
+Returning a clear response when a client is rate limited is often skipped. A plain
+503 with no explanation forces the client to guess. Returning a 429 status with a
+Retry-After header tells well-behaved clients exactly when to try again, and well
+behaved clients will respect it, reducing the very traffic you're trying to limit.
+
+
+Section 4: Logging and Observability
+
+Logs are only useful if someone can find the right one quickly during an incident.
+Unstructured log lines — free text with no consistent format — are easy to write and
+nearly impossible to query at scale. Structured logging, where every log entry is a
+JSON object with consistent field names, lets you filter and aggregate logs the same
+way you'd query a database.
+
+Every request should carry a unique request ID, generated at the edge and passed
+through every downstream service call. When a request touches five services and one
+of them fails, the request ID is what lets you pull the matching log line out of all
+five services' logs and see the full picture instead of five disconnected fragments.
+
+Log levels exist to let you control verbosity without changing code. DEBUG should be
+detailed enough to reconstruct exactly what happened, INFO should record significant
+events without flooding the log, WARN should flag situations that aren't broken yet
+but are heading that way, and ERROR should mean something actually failed. A common
+mistake is logging expected, handled situations — like a cache miss — at ERROR level,
+which trains the on-call engineer to ignore error alerts because most of them are
+noise.
+
+Metrics answer different questions than logs. Logs tell you what happened to one
+specific request. Metrics tell you what's happening across all requests right now:
+request rate, error rate, and latency percentiles, often called the three core
+signals. Latency is usually tracked as p50, p95, and p99 rather than an average,
+because an average hides the tail — a service can have a great average latency while
+one percent of users wait ten seconds.
+
+Distributed tracing connects logs and metrics by recording the full path a request
+takes through every service it touches, including how long it spent in each one. This
+is the tool that turns "the API is slow" into "the API is slow because the third
+downstream call to the inventory service takes 800ms," which is an actionable finding
+instead of a vague complaint.
+
+
+Section 5: Testing Strategy
+
+Unit tests check that a single function or class behaves correctly in isolation,
+usually with all of its dependencies replaced by fakes or mocks. They run fast and
+pinpoint failures precisely, but they prove nothing about whether the pieces work
+together correctly once wired up for real.
+
+Integration tests exercise multiple components together, often including a real
+database or a real instance of a dependent service, just running locally or in a test
+environment instead of production. These catch the bugs that unit tests structurally
+cannot: a SQL query that's syntactically valid but returns the wrong rows, or two
+services that disagree about the shape of the data they exchange.
+
+End-to-end tests drive the system the way a real user or client would, through the
+actual API or UI, with nothing mocked. They give the highest confidence that the
+system works, and they are the slowest to run and the most fragile to maintain,
+because a change anywhere in the path can break them for reasons unrelated to the
+thing being tested.
+
+The test pyramid is a guideline, not a law: many fast unit tests, a smaller number of
+integration tests, and a handful of end-to-end tests for the critical paths only.
+Inverting the pyramid — relying mostly on end-to-end tests — produces a test suite
+that is slow to run and painful to debug, because a single failure could be caused by
+almost anything in the system.
+
+Mocking the very thing you're trying to test is a trap that's easy to fall into
+without noticing. A test that mocks the database layer and then asserts that the
+database layer was called correctly is testing the mock, not the behavior. The
+mock should stand in for something outside the unit under test, never for the logic
+the test exists to verify.
+
+Flaky tests — tests that sometimes pass and sometimes fail with no code change — are
+worse than no test at all, because engineers learn to re-run failures instead of
+investigating them, and a real failure eventually gets re-run away too. The fix is
+almost always removing a hidden source of nondeterminism: unseeded randomness, real
+clock time, or test order dependence.
+
+
+Section 6: Deployment
+
+A deployment pipeline exists to make releasing software boring and repeatable.
+Manual deployment steps are where mistakes happen, because humans are inconsistent in
+ways automated scripts are not. Every step that can be scripted should be scripted,
+even if it's only run once a week.
+
+Blue-green deployment keeps two identical production environments, only one of which
+receives live traffic at any time. A new release goes to the idle environment, gets
+verified, and traffic is switched over all at once. Rolling back means switching
+traffic back to the previous environment, which is fast because nothing needs to be
+rebuilt or redeployed.
+
+Canary deployment sends a small percentage of live traffic to the new version while
+most traffic still goes to the old version. If error rates or latency on the canary
+look worse than the baseline, the rollout stops automatically before most users are
+affected. This catches problems that only show up under real production load, which
+blue-green's all-at-once switch does not.
+
+Feature flags decouple deploying code from releasing a feature. Code for a new feature
+can be deployed to production behind a flag that's turned off, verified safe, and then
+turned on independently of any deployment. This also makes rollback nearly instant for
+the specific feature, without needing to redeploy or revert a release.
+
+Database migrations are the part of deployment most likely to cause irreversible
+damage, because unlike application code, you cannot simply roll back to old data after
+a destructive schema change. Migrations should be backward compatible with the
+previous version of the application for at least one deployment cycle, so that if the
+application needs to roll back, it can still run against the new schema without
+erroring.
+
+Health checks decide whether an instance is ready to receive traffic, and whether it
+should keep receiving traffic once it's running. A shallow health check that only
+confirms the process is alive will keep sending traffic to an instance that can't
+reach its database. A health check should verify the dependencies the service actually
+needs to function, without becoming so strict that a brief, recoverable blip in one
+dependency takes a healthy instance out of rotation unnecessarily.
+
+
+Section 7: Database Connection Pooling
+
+Opening a new database connection is expensive: a TCP handshake, authentication, and
+session setup all happen before the first query can run. Doing this on every request
+adds latency that has nothing to do with the query itself. A connection pool solves
+this by keeping a set of connections open and handing them out to requests as needed,
+returning them to the pool when the request finishes instead of closing them.
+
+Sizing a connection pool is a balancing act, not a one-time decision. Too small, and
+requests queue up waiting for a free connection even when the database itself has
+spare capacity. Too large, and the database server runs out of memory or file
+descriptors trying to maintain more open connections than it can handle, which can
+degrade every client sharing that database, not just the one with the oversized pool.
+
+A useful starting point is to size the pool based on how many concurrent queries the
+application actually needs, not on how many application threads exist. Most requests
+spend far more time waiting on the database than the database spends executing the
+query, so a pool much smaller than the thread count is often enough, and it leaves
+headroom on the database for other services.
+
+Connections can go stale without the application noticing — a network blip, a
+database restart, or an idle timeout on the database side can silently kill a
+connection that the pool still considers healthy. Pools should validate a connection
+before handing it out, typically with a cheap query, and discard connections that
+fail validation instead of returning an error to the caller.
+
+Connection leaks are one of the most common causes of pool exhaustion. If application
+code acquires a connection and an exception happens before it's returned to the pool,
+that connection is gone for good unless the code is written to release it in a
+finally block, or unless the pool itself can detect and reclaim connections held
+longer than expected. Under load, even a slow leak eventually exhausts the entire
+pool and every request starts timing out waiting for a connection that will never
+come.
+
+Each service should generally maintain its own connection pool rather than sharing one
+across services, even when they talk to the same database. Sharing a pool means one
+service's traffic spike can starve every other service of connections, turning an
+isolated problem into a shared outage.
