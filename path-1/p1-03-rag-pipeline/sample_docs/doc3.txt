@@ -1,0 +1,55 @@
+Caching Strategy and Cache Invalidation
+
+The application uses a multi-layer caching strategy to reduce load on the primary
+database and lower response latency for frequently requested data. The first layer
+is an in-process memory cache local to each application server, used for data that
+is small, accessed extremely often, and tolerant of brief staleness — for example,
+feature flag values and the list of supported currencies. This layer has no network
+hop at all, so lookups complete in well under a millisecond, but each server keeps
+its own copy and a flag change can take up to thirty seconds to propagate to every
+server.
+
+The second layer is a shared Redis cluster used for data that needs to be consistent
+across all application servers, such as computed product recommendations and
+rendered fragments of frequently viewed pages. Redis lookups typically complete in
+one to three milliseconds, which is slower than the in-process cache but still far
+faster than recomputing the value or querying the database. Keys in this layer carry
+a time-to-live (TTL) appropriate to how often the underlying data changes: product
+recommendations expire after one hour, while rendered page fragments expire after
+five minutes.
+
+Cache invalidation follows a write-through pattern for data the application
+controls directly. When a product's price changes, the write path updates the
+database and then immediately deletes the corresponding cache key, rather than
+updating the cache value directly. Deleting and letting the next read repopulate
+the cache avoids a class of bugs where two concurrent writes race to update the
+cache and leave it holding a stale value indefinitely. This is sometimes called
+the cache stampede problem, and it is mitigated further with a short random jitter
+added to TTLs so that many keys do not expire at exactly the same moment and
+trigger a thundering herd of simultaneous database queries.
+
+For data the application does not control directly — such as data ingested from a
+third-party supplier feed — the system relies on TTL-based expiration alone, since
+there is no reliable signal for when the upstream data actually changed. The TTL
+for supplier data is set conservatively at fifteen minutes, balancing data freshness
+against the load that re-fetching would place on the supplier's API, which enforces
+its own rate limits.
+
+A separate cache layer sits in front of expensive analytical queries used for
+internal dashboards. These queries can take several seconds to run against the
+full transaction history, so their results are cached for thirty minutes and
+recomputed by a background job rather than on the request path, which means a
+dashboard request never blocks waiting for a slow query — it simply serves the
+most recently computed result, with a timestamp showing how stale it is.
+
+Cache warming is performed after every deployment that touches caching logic, to
+avoid an empty-cache stampede right after a rolling restart, where every server
+restarts cold at roughly the same time and floods the database with the same set
+of queries simultaneously. The warming job pre-populates the most frequently
+accessed keys, identified from the prior week's access logs, before the new
+servers are added to the load balancer's healthy pool.
+
+Monitoring tracks cache hit rate as a primary health signal. A sustained drop in
+hit rate below ninety percent for the Redis layer triggers an alert, since it
+usually indicates either a recent invalidation bug or a sudden shift in traffic
+patterns toward previously uncached data.

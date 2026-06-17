@@ -20,7 +20,7 @@ Projects land one at a time, fully built and tested before merge.
 
 - [x] p1-01 — Document Chat 🟢
 - [x] p1-02 — Structured Output Extractor 🟢
-- [ ] p1-03 — RAG Pipeline 🟢
+- [x] p1-03 — RAG Pipeline 🟢
 - [ ] p1-04 — Context Window Manager 🟢
 - [ ] p1-05 — Multi-step LLM Pipeline 🟢
 - [ ] p1-06 — Tool-Calling Agent 🟢

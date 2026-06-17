@@ -1,0 +1,53 @@
+Database Backup and Disaster Recovery
+
+The production database runs on a managed PostgreSQL instance with continuous
+write-ahead log (WAL) archiving enabled. Every transaction is written to the WAL
+before it is applied to the data files, and the WAL segments are shipped to object
+storage every sixty seconds. This allows the system to perform point-in-time
+recovery to any second within the retention window, rather than only being able to
+restore to the moment of the last full backup.
+
+Full base backups are taken nightly at 2:00 AM UTC, when traffic is at its lowest.
+A base backup is a complete copy of the data directory at a consistent point in
+time, and it forms the starting point that WAL segments are replayed against during
+recovery. Base backups are retained for thirty days, after which they are deleted
+to control storage cost. WAL segments are retained for seven days beyond the oldest
+retained base backup, which is enough to recover to any point within the last
+thirty-seven days.
+
+Backups are verified automatically every morning by restoring the most recent base
+backup plus all subsequent WAL segments into a throwaway staging instance, then
+running a checksum comparison against a known set of canary rows that are updated
+on a fixed schedule. If the checksum comparison fails, an alert fires immediately
+to the on-call engineer, because an unverified backup is not a backup — it is an
+assumption. This verification step has caught two corrupted backup chains in the
+past year, both caused by a misconfigured storage lifecycle policy that deleted
+WAL segments before the corresponding base backup was created.
+
+The disaster recovery plan defines two key metrics: recovery point objective (RPO)
+and recovery time objective (RTO). The RPO is fifteen minutes, meaning the system
+should never lose more than fifteen minutes of committed transactions in a disaster.
+The RTO is two hours, meaning the database should be back online and serving traffic
+within two hours of a declared outage. These targets are tested quarterly with a
+live failover drill, where the team intentionally takes down the primary region and
+times how long it takes to bring up a fully functional replica in the secondary
+region.
+
+Cross-region replication uses asynchronous streaming replication to a standby
+instance in a different AWS region. Because replication is asynchronous, there is
+a small window — typically under five seconds — where a committed transaction on
+the primary has not yet reached the standby. This is an accepted tradeoff: synchronous
+replication across regions would add significant latency to every write, since each
+write would have to wait for acknowledgment from a data center hundreds of miles away.
+
+When a regional failover is declared, the standby is promoted to primary, DNS records
+are updated to point application servers at the new primary, and the old primary is
+demoted to a standby once the region recovers. Application servers retry failed
+database connections with exponential backoff during the failover window, which
+typically lasts under ninety seconds in drills. Any transactions in flight during
+the failover are rolled back and must be retried by the client, which is why all
+write operations in the application are designed to be idempotent using a unique
+request identifier supplied by the caller.
+
+Backup encryption uses AES-256 at rest, with encryption keys managed by a dedicated
+key management service rather than stored alongside the backups themselves.
