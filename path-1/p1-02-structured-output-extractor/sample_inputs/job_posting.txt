@@ -1,0 +1,27 @@
+Senior ML Engineer — Acme Corp
+
+Acme Corp is hiring a Senior Machine Learning Engineer to join our applied AI
+team. This is a full-time, fully remote position open to candidates anywhere
+in the US.
+
+You will design and ship production machine learning systems that power our
+recommendation and forecasting products, working closely with data engineering
+and product teams. We are looking for someone who can take a model from a
+notebook prototype to a reliable, monitored service running at scale.
+
+Responsibilities:
+- Build and maintain training and inference pipelines
+- Own model performance in production, including drift monitoring
+- Collaborate with backend engineers to deploy models behind low-latency APIs
+- Mentor junior engineers on ML best practices
+
+Requirements:
+- 5+ years of professional experience building ML systems
+- Strong Python skills and deep familiarity with PyTorch
+- Hands-on experience deploying models on AWS
+- Comfortable working independently in a remote-first team
+
+Compensation: $180,000–$220,000 base, plus equity and full benefits.
+
+Apply with your resume and a short note about a production ML system you have
+shipped end to end.

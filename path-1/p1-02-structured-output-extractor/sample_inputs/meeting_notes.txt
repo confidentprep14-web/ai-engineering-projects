@@ -1,0 +1,23 @@
+Meeting: Q3 Roadmap Sync
+Date: 2026-03-12
+Attendees: Priya Shah, Marcus Lee, Devon Okafor, Liang Wu
+
+Priya opened with a recap of Q2 results and the slip on the search-latency
+project. The team agreed that latency work should be the top priority for Q3
+before any new feature work starts. Marcus raised concerns about the data
+pipeline's reliability and the group decided to pause the analytics dashboard
+project for two weeks to investigate pipeline failures.
+
+Decisions:
+- Search latency becomes the top Q3 priority over new features
+- Analytics dashboard project is paused for two weeks
+- Weekly sync moves from Monday to Wednesday starting next week
+
+Action items:
+- Marcus will audit the data pipeline failure logs and report back by 2026-03-19
+- Devon will draft the revised Q3 roadmap doc by end of week
+- Liang will benchmark current search latency against the SLA target, no firm
+  deadline given yet
+- Priya will notify stakeholders about the dashboard pause by 2026-03-13
+
+Meeting closed with agreement to revisit pipeline findings at next week's sync.

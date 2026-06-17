@@ -19,7 +19,7 @@ Projects land one at a time, fully built and tested before merge.
 ### Path 1 — AI Engineering Fundamentals
 
 - [x] p1-01 — Document Chat 🟢
-- [ ] p1-02 — Structured Output Extractor 🟢
+- [x] p1-02 — Structured Output Extractor 🟢
 - [ ] p1-03 — RAG Pipeline 🟢
 - [ ] p1-04 — Context Window Manager 🟢
 - [ ] p1-05 — Multi-step LLM Pipeline 🟢

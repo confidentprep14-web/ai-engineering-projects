@@ -1,0 +1,20 @@
+From: jordan.kim@example.com
+Subject: App crashes every time I try to export a report
+
+Hi, I'm a paying customer on the Pro plan using the Analytics Dashboard
+product. Every time I click "Export to PDF" on a report with more than 50
+rows, the app freezes for about ten seconds and then crashes completely. I
+have to restart the browser tab to use the app again.
+
+Steps to reproduce:
+1. Open any report with 50+ rows
+2. Click the "Export to PDF" button
+3. Wait ~10 seconds
+4. App freezes and then the tab crashes
+
+This is blocking our end-of-month reporting and three people on my team hit
+the same crash today. Could you please prioritize a fix, or at least tell me
+if there's a workaround? Refunding this month isn't necessary, I just need
+exports to work again.
+
+— Jordan Kim
