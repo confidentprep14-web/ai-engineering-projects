@@ -1,0 +1,27 @@
+suite_name: "Q&A Quality Suite"
+description: "Tests for a customer support assistant prompt"
+
+scoring_dimensions:
+  - name: precision
+    description: "Answer addresses exactly what was asked, no more"
+    passing_threshold: 3      # score must be >= 3 (out of 5) to pass
+  - name: completeness
+    description: "Answer covers all key points needed to resolve the question"
+    passing_threshold: 3
+  - name: tone
+    description: "Answer is professional and empathetic"
+    passing_threshold: 4
+
+test_cases:
+  - id: tc-001
+    description: "Refund policy question"
+    input: "Can I get a refund after 30 days?"
+    context: "Our refund policy is 30 days from purchase. After 30 days, store credit only."
+  - id: tc-002
+    description: "Shipping timeline question"
+    input: "When will my order arrive?"
+    context: "Standard shipping is 5–7 business days. Express is 2 business days."
+  - id: tc-003
+    description: "Account locked question"
+    input: "I can't log in, my account seems locked."
+    context: "Accounts lock after 5 failed login attempts. Reset via email link."

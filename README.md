@@ -26,7 +26,7 @@ Projects land one at a time, fully built and tested before merge.
 - [x] p1-06 — Tool-Calling Agent 🟢
 - [x] p1-07 — Persistent Agent with Memory 🟢
 - [x] p1-08 — Streaming Chat API 🟢
-- [ ] p1-09 — Prompt Evaluation Framework 🟢
+- [x] p1-09 — Prompt Evaluation Framework 🟢
 - [ ] p1-10 — Dockerize Your App 🟡
 - [ ] p1-11 — Deploy to AWS Lambda 🔴
 - [ ] p1-12 — Capstone: Full AI Assistant 🔴
