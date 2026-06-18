@@ -1,0 +1,13 @@
+diff --git a/tests/fixtures/off_by_one.py b/tests/fixtures/off_by_one.py
+index 5555555..6666666 100644
+--- a/tests/fixtures/off_by_one.py
++++ b/tests/fixtures/off_by_one.py
+@@ -5,6 +5,6 @@
+
+
+ def sum_all(items):
+     total = 0
+-    for i in range(len(items)):
++    for i in range(len(items) + 1):
+         total += items[i]
+     return total

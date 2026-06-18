@@ -1,0 +1,14 @@
+diff --git a/tests/fixtures/n_plus_one.py b/tests/fixtures/n_plus_one.py
+index 3333333..4444444 100644
+--- a/tests/fixtures/n_plus_one.py
++++ b/tests/fixtures/n_plus_one.py
+@@ -4,4 +4,8 @@
+
+
+ def get_user_emails(db, users):
+-    return [u.email for u in users]
++    emails = []
++    for user in users:
++        record = db.query(f"SELECT email FROM users WHERE id = {user.id}")
++        emails.append(record.email)
++    return emails
