@@ -19,6 +19,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [PR Diff Summarizer](pr-diff-summarizer/) 🟢
 - [x] [Semantic Codebase Search](semantic-codebase-search/) 🟢
 - [x] [Code Documentation Generator](code-doc-generator/) 🟢
+- [x] [Local to SageMaker](local-to-sagemaker/) 🟡
 
 More projects land one at a time, fully built and tested before merge.
 
