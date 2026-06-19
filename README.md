@@ -21,6 +21,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Code Documentation Generator](code-doc-generator/) 🟢
 - [x] [Local to SageMaker](local-to-sagemaker/) 🟡
 - [x] [Data Exploration](data-exploration/) 🟢
+- [x] [Feature Engineering](feature-engineering/) 🟡
 
 More projects land one at a time, fully built and tested before merge.
 
