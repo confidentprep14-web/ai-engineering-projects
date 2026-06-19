@@ -18,6 +18,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Code Review Bot](code-review-bot/) 🟢
 - [x] [PR Diff Summarizer](pr-diff-summarizer/) 🟢
 - [x] [Semantic Codebase Search](semantic-codebase-search/) 🟢
+- [x] [Code Documentation Generator](code-doc-generator/) 🟢
 
 More projects land one at a time, fully built and tested before merge.
 
