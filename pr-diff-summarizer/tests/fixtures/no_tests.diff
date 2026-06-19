@@ -1,0 +1,25 @@
+diff --git a/src/auth.py b/src/auth.py
+index 3f1a2b4..9c8d7e1 100644
+--- a/src/auth.py
++++ b/src/auth.py
+@@ -10,11 +10,19 @@ from src.db import get_user_by_email
+ from src.tokens import issue_token
+
+
+-def login(email, password):
++def login(email, password, remember_me=False):
+     user = get_user_by_email(email)
+     if user is None:
+         return None
+     if not user.check_password(password):
+         return None
+-    return issue_token(user)
++    token = issue_token(user)
++    if remember_me:
++        token.expires_in = 60 * 60 * 24 * 30
++    return token
++
++
++def logout(token):
++    token.revoke()
++    return True

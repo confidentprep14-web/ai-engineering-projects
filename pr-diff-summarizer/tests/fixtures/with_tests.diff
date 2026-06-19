@@ -1,0 +1,47 @@
+diff --git a/src/auth.py b/src/auth.py
+index 3f1a2b4..9c8d7e1 100644
+--- a/src/auth.py
++++ b/src/auth.py
+@@ -10,11 +10,19 @@ from src.db import get_user_by_email
+ from src.tokens import issue_token
+
+
+-def login(email, password):
++def login(email, password, remember_me=False):
+     user = get_user_by_email(email)
+     if user is None:
+         return None
+     if not user.check_password(password):
+         return None
+-    return issue_token(user)
++    token = issue_token(user)
++    if remember_me:
++        token.expires_in = 60 * 60 * 24 * 30
++    return token
++
++
++def logout(token):
++    token.revoke()
++    return True
+diff --git a/tests/test_auth.py b/tests/test_auth.py
+index a1b2c3d..e4f5g6h 100644
+--- a/tests/test_auth.py
++++ b/tests/test_auth.py
+@@ -1,5 +1,17 @@
+ from src.auth import login
+
+
+ def test_login_returns_token_for_valid_credentials():
+     assert login("user@example.com", "correct-password") is not None
++
++
++def test_login_with_remember_me_extends_expiry():
++    token = login("user@example.com", "correct-password", remember_me=True)
++    assert token.expires_in == 60 * 60 * 24 * 30
++
++
++def test_logout_revokes_token():
++    token = login("user@example.com", "correct-password")
++    from src.auth import logout
++
++    assert logout(token) is True

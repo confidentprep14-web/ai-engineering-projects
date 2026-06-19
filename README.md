@@ -16,6 +16,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Streaming Chat API](streaming-chat-api/) 🟢
 - [x] [Prompt Evaluation Framework](prompt-eval/) 🟢
 - [x] [Code Review Bot](code-review-bot/) 🟢
+- [x] [PR Diff Summarizer](pr-diff-summarizer/) 🟢
 
 More projects land one at a time, fully built and tested before merge.
 

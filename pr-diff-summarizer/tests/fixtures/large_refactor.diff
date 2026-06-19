@@ -1,0 +1,86 @@
+diff --git a/src/database.py b/src/database.py
+index 1111111..2222222 100644
+--- a/src/database.py
++++ b/src/database.py
+@@ -1,20 +1,32 @@
+-import sqlite3
++import psycopg2
++from contextlib import contextmanager
+
+-def get_connection():
+-    return sqlite3.connect("app.db")
++DATABASE_URL = "postgresql://localhost:5432/app"
+
+-def get_user_by_id(user_id):
+-    conn = get_connection()
+-    cursor = conn.cursor()
+-    cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+-    return cursor.fetchone()
++
++@contextmanager
++def get_connection():
++    conn = psycopg2.connect(DATABASE_URL)
++    try:
++        yield conn
++    finally:
++        conn.close()
++
++
++def get_user_by_id(user_id):
++    with get_connection() as conn:
++        cursor = conn.cursor()
++        cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))
++        return cursor.fetchone()
+diff --git a/src/cache.py b/src/cache.py
+new file mode 100644
+index 0000000..3333333
+--- /dev/null
++++ b/src/cache.py
+@@ -0,0 +1,15 @@
++import redis
++
++_client = None
++
++
++def get_cache_client():
++    global _client
++    if _client is None:
++        _client = redis.Redis(host="localhost", port=6379, db=0)
++    return _client
++
++
++def cache_user(user_id, payload, ttl=300):
++    client = get_cache_client()
++    client.set(f"user:{user_id}", payload, ex=ttl)
+diff --git a/src/models.py b/src/models.py
+index 4444444..5555555 100644
+--- a/src/models.py
++++ b/src/models.py
+@@ -5,7 +5,7 @@ class User:
+     def __init__(self, id, email, name):
+         self.id = id
+         self.email = email
+-        self.name = name
++        self.display_name = name
+
+     def __repr__(self):
+-        return f"<User {self.id} {self.name}>"
++        return f"<User {self.id} {self.display_name}>"
+diff --git a/src/legacy_sqlite_adapter.py b/src/legacy_sqlite_adapter.py
+deleted file mode 100644
+index 6666666..0000000
+--- a/src/legacy_sqlite_adapter.py
++++ /dev/null
+@@ -1,9 +0,0 @@
+-import sqlite3
+-
+-
+-def legacy_connect():
+-    return sqlite3.connect("legacy.db")
+-
+-
+-def legacy_migrate():
+-    pass
+diff --git a/assets/logo.png b/assets/logo.png
+index 7777777..8888888 100644
+Binary files a/assets/logo.png and b/assets/logo.png differ
