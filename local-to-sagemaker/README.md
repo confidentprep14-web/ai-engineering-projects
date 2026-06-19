@@ -118,6 +118,16 @@ bash scripts/teardown.sh
 
 Deletes: S3 training data, S3 model artifact. Does NOT delete the S3 bucket itself.
 
+**If you also deployed the CDK stack:** `cdk destroy` removes the IAM role but does
+**not** delete the bucket — it's created with `RemovalPolicy.RETAIN` specifically so a
+stack teardown can never silently delete training data or model artifacts. The bucket
+will keep costing (small) S3 storage charges until you empty and delete it yourself:
+
+```bash
+aws s3 rm s3://<bucket-name> --recursive
+aws s3api delete-bucket --bucket <bucket-name>
+```
+
 ## What's verified vs. not
 
 | Piece | Status |
