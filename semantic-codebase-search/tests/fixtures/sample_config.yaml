@@ -1,0 +1,50 @@
+# Sample non-Python config file used to exercise the heuristic chunker.
+app:
+  name: semantic-codebase-search
+  version: "1.0.0"
+  environment: development
+
+server:
+  host: 0.0.0.0
+  port: 8080
+  workers: 4
+  timeout_seconds: 30
+
+database:
+  driver: postgresql
+  host: localhost
+  port: 5432
+  name: app_db
+  pool:
+    min_size: 1
+    max_size: 10
+
+logging:
+  level: INFO
+  format: json
+  destinations:
+    - stdout
+    - file
+
+features:
+  semantic_search: true
+  incremental_indexing: true
+  model_comparison: true
+
+embedding:
+  primary_model: all-MiniLM-L6-v2
+  compare_model: all-MiniLM-L6-v2
+  top_k: 5
+  min_score: 0.0
+
+retry:
+  max_attempts: 3
+  backoff_seconds: 2
+
+cache:
+  enabled: true
+  ttl_seconds: 3600
+
+metrics:
+  enabled: true
+  export_interval_seconds: 60
