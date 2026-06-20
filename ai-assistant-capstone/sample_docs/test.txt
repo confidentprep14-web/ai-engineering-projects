@@ -1,0 +1,21 @@
+Document Chunking for Retrieval-Augmented Generation
+
+Chunking is the process of splitting a long document into smaller pieces
+before embedding and indexing it for retrieval. The size of each chunk and
+the amount of overlap between adjacent chunks both affect retrieval quality.
+
+Smaller chunks tend to produce more precise retrieval because the embedding
+represents a narrower slice of text, but they can lose surrounding context
+that a question depends on. Larger chunks preserve more context but dilute
+the embedding, making it less likely to score highly for any single specific
+question.
+
+A common starting point is a chunk size of 500-1000 characters with roughly
+15-20% overlap between consecutive chunks. The overlap exists so that a
+sentence or idea that spans a chunk boundary is not split awkwardly —
+both chunks on either side of the boundary still contain the full idea.
+
+This project chunks text into 800-character windows with 150 characters of
+overlap, then embeds each chunk with a sentence-transformer model and stores
+the resulting vectors in a FAISS index for fast similarity search at query
+time.

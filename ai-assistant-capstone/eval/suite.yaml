@@ -1,0 +1,72 @@
+suite_name: "Full Assistant Eval"
+description: "End-to-end tests covering RAG retrieval, tool use, and multi-turn memory"
+
+scoring_dimensions:
+  - name: relevance
+    description: "Answer directly addresses the question asked"
+    passing_threshold: 3
+  - name: accuracy
+    description: "Factual claims in the answer are correct"
+    passing_threshold: 4
+
+test_cases:
+  - id: rag-001
+    description: "RAG: question answerable from uploaded document"
+    input: "What does the uploaded document say about chunking?"
+    context: "The user has uploaded a document about text processing."
+    use_rag: true
+  - id: tool-001
+    description: "Tool use: arithmetic"
+    input: "What is 2 to the power of 16?"
+    context: ""
+    use_rag: false
+  - id: tool-002
+    description: "Tool use: current date"
+    input: "What day of the week is today?"
+    context: ""
+    use_rag: false
+  - id: multi-001
+    description: "Multi-turn: remembers prior context"
+    input: "What was the first question I asked in this session?"
+    context: "Prior turns exist in session."
+    use_rag: false
+  - id: rag-002
+    description: "RAG: question about a specific number mentioned in the document"
+    input: "What chunk size and overlap does the project use, according to the document?"
+    context: "The uploaded document states the project uses 800-character chunks with 150 overlap."
+    use_rag: true
+  - id: rag-003
+    description: "RAG edge case: question NOT answerable from the document (should not hallucinate)"
+    input: "According to the uploaded document, what programming language is the project written in?"
+    context: "The document never mentions a programming language."
+    use_rag: true
+  - id: tool-003
+    description: "Tool use: Wikipedia lookup"
+    input: "Give me a one-sentence summary of what Python (programming language) is, using Wikipedia."
+    context: ""
+    use_rag: false
+  - id: tool-004
+    description: "Tool edge case: malformed arithmetic expression should not crash the assistant"
+    input: "What is the result of 5 + + 3?"
+    context: ""
+    use_rag: false
+  - id: tool-005
+    description: "Tool edge case: division by zero should be handled gracefully"
+    input: "What is 10 divided by 0?"
+    context: ""
+    use_rag: false
+  - id: multi-002
+    description: "Multi-turn: pronoun resolution across turns"
+    input: "And what about the second one?"
+    context: "Assumes a prior turn established a list of at least two items."
+    use_rag: false
+  - id: combo-001
+    description: "Combined: RAG context plus a tool call in the same turn"
+    input: "Based on the uploaded document's chunk size, what would the overlap be if it were 25% instead — and what's today's date?"
+    context: "Tests that RAG context and tool use are not mutually exclusive in one turn."
+    use_rag: true
+  - id: edge-001
+    description: "Edge case: empty/near-empty message"
+    input: "?"
+    context: "Assistant should ask for clarification rather than error out."
+    use_rag: false
