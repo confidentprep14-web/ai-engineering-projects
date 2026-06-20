@@ -1,0 +1,500 @@
+2024-01-01T10:00:01 INFO Replication lag check: 0ms
+2024-01-01T10:00:02 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:00:03 INFO Vacuum completed on table orders
+2024-01-01T10:00:04 INFO Connection acquired from pool
+2024-01-01T10:00:05 INFO Connection released back to pool
+2024-01-01T10:00:06 INFO Connection released back to pool
+2024-01-01T10:00:07 INFO Replication lag check: 0ms
+2024-01-01T10:00:08 INFO Connection acquired from pool
+2024-01-01T10:00:09 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:10 INFO Connection acquired from pool
+2024-01-01T10:00:11 INFO Connection released back to pool
+2024-01-01T10:00:12 INFO Vacuum completed on table orders
+2024-01-01T10:00:13 INFO Vacuum completed on table orders
+2024-01-01T10:00:14 INFO Connection released back to pool
+2024-01-01T10:00:15 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:16 INFO Connection released back to pool
+2024-01-01T10:00:17 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:00:18 INFO Vacuum completed on table orders
+2024-01-01T10:00:19 INFO Connection acquired from pool
+2024-01-01T10:00:20 INFO Connection released back to pool
+2024-01-01T10:00:21 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:22 INFO Connection acquired from pool
+2024-01-01T10:00:23 INFO Vacuum completed on table orders
+2024-01-01T10:00:24 INFO Connection acquired from pool
+2024-01-01T10:00:25 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:26 INFO Connection acquired from pool
+2024-01-01T10:00:27 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:00:28 INFO Transaction committed
+2024-01-01T10:00:29 INFO Vacuum completed on table orders
+2024-01-01T10:00:30 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:00:31 INFO Connection released back to pool
+2024-01-01T10:00:32 INFO Transaction committed
+2024-01-01T10:00:33 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:00:34 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:00:35 INFO Connection released back to pool
+2024-01-01T10:00:36 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:37 INFO Replication lag check: 0ms
+2024-01-01T10:00:38 INFO Connection released back to pool
+2024-01-01T10:00:39 INFO Connection released back to pool
+2024-01-01T10:00:40 INFO Connection acquired from pool
+2024-01-01T10:00:41 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:42 INFO Index scan completed
+2024-01-01T10:00:43 INFO Vacuum completed on table orders
+2024-01-01T10:00:44 INFO Replication lag check: 0ms
+2024-01-01T10:00:45 INFO Index scan completed
+2024-01-01T10:00:46 INFO Index scan completed
+2024-01-01T10:00:47 INFO Replication lag check: 0ms
+2024-01-01T10:00:48 INFO Transaction committed
+2024-01-01T10:00:49 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:00:50 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:00:51 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:00:52 INFO Connection released back to pool
+2024-01-01T10:00:53 INFO Transaction committed
+2024-01-01T10:00:54 INFO Index scan completed
+2024-01-01T10:00:55 INFO Replication lag check: 0ms
+2024-01-01T10:00:56 INFO Index scan completed
+2024-01-01T10:00:57 INFO Transaction committed
+2024-01-01T10:00:58 INFO Connection released back to pool
+2024-01-01T10:00:59 INFO Connection released back to pool
+2024-01-01T10:01:00 INFO Vacuum completed on table orders
+2024-01-01T10:01:01 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:02 INFO Replication lag check: 0ms
+2024-01-01T10:01:03 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:04 INFO Index scan completed
+2024-01-01T10:01:05 WARN Replication lag exceeds threshold: 8200ms
+2024-01-01T10:01:06 INFO Connection acquired from pool
+2024-01-01T10:01:07 INFO Connection released back to pool
+2024-01-01T10:01:08 INFO Replication lag check: 0ms
+2024-01-01T10:01:09 INFO Replication lag check: 0ms
+2024-01-01T10:01:10 INFO Replication lag check: 0ms
+2024-01-01T10:01:11 INFO Index scan completed
+2024-01-01T10:01:12 INFO Index scan completed
+2024-01-01T10:01:13 INFO Connection released back to pool
+2024-01-01T10:01:14 INFO Connection released back to pool
+2024-01-01T10:01:15 INFO Transaction committed
+2024-01-01T10:01:16 INFO Index scan completed
+2024-01-01T10:01:17 INFO Connection released back to pool
+2024-01-01T10:01:18 INFO Connection acquired from pool
+2024-01-01T10:01:19 INFO Transaction committed
+2024-01-01T10:01:20 INFO Index scan completed
+2024-01-01T10:01:21 WARN Replication lag exceeds threshold: 8200ms
+2024-01-01T10:01:22 INFO Vacuum completed on table orders
+2024-01-01T10:01:23 INFO Replication lag check: 0ms
+2024-01-01T10:01:24 INFO Connection acquired from pool
+2024-01-01T10:01:25 INFO Index scan completed
+2024-01-01T10:01:26 INFO Replication lag check: 0ms
+2024-01-01T10:01:27 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:28 INFO Connection released back to pool
+2024-01-01T10:01:29 INFO Index scan completed
+2024-01-01T10:01:30 INFO Connection acquired from pool
+2024-01-01T10:01:31 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:01:32 INFO Transaction committed
+2024-01-01T10:01:33 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:34 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:01:35 INFO Vacuum completed on table orders
+2024-01-01T10:01:36 INFO Vacuum completed on table orders
+2024-01-01T10:01:37 WARN Replication lag exceeds threshold: 8200ms
+2024-01-01T10:01:38 INFO Connection released back to pool
+2024-01-01T10:01:39 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:40 INFO Index scan completed
+2024-01-01T10:01:41 INFO Vacuum completed on table orders
+2024-01-01T10:01:42 INFO Transaction committed
+2024-01-01T10:01:43 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:44 INFO Vacuum completed on table orders
+2024-01-01T10:01:45 INFO Transaction committed
+2024-01-01T10:01:46 INFO Vacuum completed on table orders
+2024-01-01T10:01:47 INFO Replication lag check: 0ms
+2024-01-01T10:01:48 INFO Vacuum completed on table orders
+2024-01-01T10:01:49 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:01:50 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:51 INFO Connection released back to pool
+2024-01-01T10:01:52 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:53 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:01:54 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:01:55 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:01:56 INFO Connection acquired from pool
+2024-01-01T10:01:57 INFO Index scan completed
+2024-01-01T10:01:58 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:01:59 INFO Transaction committed
+2024-01-01T10:02:00 INFO Transaction committed
+2024-01-01T10:02:01 INFO Connection acquired from pool
+2024-01-01T10:02:02 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:03 INFO Vacuum completed on table orders
+2024-01-01T10:02:04 INFO Replication lag check: 0ms
+2024-01-01T10:02:05 INFO Replication lag check: 0ms
+2024-01-01T10:02:06 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:07 INFO Connection acquired from pool
+2024-01-01T10:02:08 INFO Index scan completed
+2024-01-01T10:02:09 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:02:10 INFO Vacuum completed on table orders
+2024-01-01T10:02:11 INFO Vacuum completed on table orders
+2024-01-01T10:02:12 INFO Vacuum completed on table orders
+2024-01-01T10:02:13 INFO Vacuum completed on table orders
+2024-01-01T10:02:14 INFO Connection released back to pool
+2024-01-01T10:02:15 INFO Index scan completed
+2024-01-01T10:02:16 INFO Vacuum completed on table orders
+2024-01-01T10:02:17 INFO Connection acquired from pool
+2024-01-01T10:02:18 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:02:19 INFO Connection released back to pool
+2024-01-01T10:02:20 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:02:21 INFO Index scan completed
+2024-01-01T10:02:22 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:23 INFO Connection released back to pool
+2024-01-01T10:02:24 INFO Replication lag check: 0ms
+2024-01-01T10:02:25 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:02:26 INFO Connection acquired from pool
+2024-01-01T10:02:27 INFO Connection released back to pool
+2024-01-01T10:02:28 INFO Connection acquired from pool
+2024-01-01T10:02:29 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:30 INFO Connection released back to pool
+2024-01-01T10:02:31 INFO Replication lag check: 0ms
+2024-01-01T10:02:32 INFO Connection acquired from pool
+2024-01-01T10:02:33 INFO Connection released back to pool
+2024-01-01T10:02:34 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:02:35 INFO Vacuum completed on table orders
+2024-01-01T10:02:36 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:37 INFO Transaction committed
+2024-01-01T10:02:38 INFO Replication lag check: 0ms
+2024-01-01T10:02:39 INFO Replication lag check: 0ms
+2024-01-01T10:02:40 INFO Index scan completed
+2024-01-01T10:02:41 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:02:42 INFO Connection released back to pool
+2024-01-01T10:02:43 INFO Index scan completed
+2024-01-01T10:02:44 INFO Index scan completed
+2024-01-01T10:02:45 INFO Index scan completed
+2024-01-01T10:02:46 INFO Index scan completed
+2024-01-01T10:02:47 INFO Transaction committed
+2024-01-01T10:02:48 INFO Connection released back to pool
+2024-01-01T10:02:49 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:50 INFO Connection released back to pool
+2024-01-01T10:02:51 INFO Replication lag check: 0ms
+2024-01-01T10:02:52 INFO Transaction committed
+2024-01-01T10:02:53 INFO Index scan completed
+2024-01-01T10:02:54 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:02:55 INFO Connection acquired from pool
+2024-01-01T10:02:56 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:02:57 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:02:58 INFO Replication lag check: 0ms
+2024-01-01T10:02:59 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:03:00 INFO Connection acquired from pool
+2024-01-01T10:03:01 INFO Transaction committed
+2024-01-01T10:03:02 INFO Connection released back to pool
+2024-01-01T10:03:03 INFO Transaction committed
+2024-01-01T10:03:04 INFO Replication lag check: 0ms
+2024-01-01T10:03:05 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:03:06 INFO Replication lag check: 0ms
+2024-01-01T10:03:07 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:08 INFO Replication lag check: 0ms
+2024-01-01T10:03:09 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:10 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:11 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:12 INFO Vacuum completed on table orders
+2024-01-01T10:03:13 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:03:14 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:15 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:16 INFO Index scan completed
+2024-01-01T10:03:17 INFO Replication lag check: 0ms
+2024-01-01T10:03:18 INFO Connection acquired from pool
+2024-01-01T10:03:19 INFO Connection acquired from pool
+2024-01-01T10:03:20 INFO Transaction committed
+2024-01-01T10:03:21 INFO Index scan completed
+2024-01-01T10:03:22 INFO Transaction committed
+2024-01-01T10:03:23 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:24 INFO Replication lag check: 0ms
+2024-01-01T10:03:25 INFO Index scan completed
+2024-01-01T10:03:26 INFO Replication lag check: 0ms
+2024-01-01T10:03:27 INFO Replication lag check: 0ms
+2024-01-01T10:03:28 INFO Connection released back to pool
+2024-01-01T10:03:29 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:03:30 INFO Connection released back to pool
+2024-01-01T10:03:31 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:32 INFO Index scan completed
+2024-01-01T10:03:33 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:34 INFO Replication lag check: 0ms
+2024-01-01T10:03:35 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:36 INFO Index scan completed
+2024-01-01T10:03:37 INFO Connection acquired from pool
+2024-01-01T10:03:38 INFO Index scan completed
+2024-01-01T10:03:39 INFO Replication lag check: 0ms
+2024-01-01T10:03:40 INFO Connection released back to pool
+2024-01-01T10:03:41 INFO Connection released back to pool
+2024-01-01T10:03:42 INFO Vacuum completed on table orders
+2024-01-01T10:03:43 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:03:44 INFO Index scan completed
+2024-01-01T10:03:45 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:03:46 INFO Vacuum completed on table orders
+2024-01-01T10:03:47 INFO Replication lag check: 0ms
+2024-01-01T10:03:48 INFO Connection released back to pool
+2024-01-01T10:03:49 INFO Vacuum completed on table orders
+2024-01-01T10:03:50 INFO Index scan completed
+2024-01-01T10:03:51 INFO Vacuum completed on table orders
+2024-01-01T10:03:52 INFO Connection released back to pool
+2024-01-01T10:03:53 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:03:54 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:03:55 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:03:56 INFO Connection acquired from pool
+2024-01-01T10:03:57 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:03:58 INFO Index scan completed
+2024-01-01T10:03:59 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:00 INFO Index scan completed
+2024-01-01T10:04:01 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:04:02 INFO Replication lag check: 0ms
+2024-01-01T10:04:03 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:04 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:05 INFO Connection acquired from pool
+2024-01-01T10:04:06 INFO Connection acquired from pool
+2024-01-01T10:04:07 INFO Connection released back to pool
+2024-01-01T10:04:08 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:09 INFO Vacuum completed on table orders
+2024-01-01T10:04:10 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:11 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:12 INFO Connection acquired from pool
+2024-01-01T10:04:13 INFO Transaction committed
+2024-01-01T10:04:14 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:15 INFO Transaction committed
+2024-01-01T10:04:16 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:17 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:04:18 INFO Replication lag check: 0ms
+2024-01-01T10:04:19 INFO Transaction committed
+2024-01-01T10:04:20 INFO Vacuum completed on table orders
+2024-01-01T10:04:21 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:22 INFO Connection acquired from pool
+2024-01-01T10:04:23 INFO Replication lag check: 0ms
+2024-01-01T10:04:24 INFO Index scan completed
+2024-01-01T10:04:25 INFO Vacuum completed on table orders
+2024-01-01T10:04:26 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:27 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:28 INFO Connection acquired from pool
+2024-01-01T10:04:29 INFO Index scan completed
+2024-01-01T10:04:30 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:31 INFO Connection acquired from pool
+2024-01-01T10:04:32 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:33 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:04:34 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:04:35 INFO Index scan completed
+2024-01-01T10:04:36 INFO Connection released back to pool
+2024-01-01T10:04:37 INFO Connection acquired from pool
+2024-01-01T10:04:38 INFO Replication lag check: 0ms
+2024-01-01T10:04:39 INFO Index scan completed
+2024-01-01T10:04:40 INFO Connection released back to pool
+2024-01-01T10:04:41 INFO Connection acquired from pool
+2024-01-01T10:04:42 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:43 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:44 INFO Transaction committed
+2024-01-01T10:04:45 INFO Connection acquired from pool
+2024-01-01T10:04:46 INFO Connection released back to pool
+2024-01-01T10:04:47 INFO Index scan completed
+2024-01-01T10:04:48 INFO Connection acquired from pool
+2024-01-01T10:04:49 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:04:50 INFO Index scan completed
+2024-01-01T10:04:51 INFO Replication lag check: 0ms
+2024-01-01T10:04:52 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:53 INFO Transaction committed
+2024-01-01T10:04:54 INFO Index scan completed
+2024-01-01T10:04:55 INFO Index scan completed
+2024-01-01T10:04:56 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:57 INFO Transaction committed
+2024-01-01T10:04:58 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:04:59 INFO Index scan completed
+2024-01-01T10:05:00 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:01 INFO Vacuum completed on table orders
+2024-01-01T10:05:02 INFO Connection released back to pool
+2024-01-01T10:05:03 INFO Vacuum completed on table orders
+2024-01-01T10:05:04 INFO Index scan completed
+2024-01-01T10:05:05 WARN Replication lag exceeds threshold: 8200ms
+2024-01-01T10:05:06 INFO Connection released back to pool
+2024-01-01T10:05:07 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:05:08 INFO Vacuum completed on table orders
+2024-01-01T10:05:09 INFO Connection released back to pool
+2024-01-01T10:05:10 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:05:11 INFO Transaction committed
+2024-01-01T10:05:12 INFO Connection released back to pool
+2024-01-01T10:05:13 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:14 INFO Replication lag check: 0ms
+2024-01-01T10:05:15 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:16 INFO Transaction committed
+2024-01-01T10:05:17 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:18 INFO Index scan completed
+2024-01-01T10:05:19 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:05:20 INFO Connection released back to pool
+2024-01-01T10:05:21 WARN Replication lag exceeds threshold: 8200ms
+2024-01-01T10:05:22 INFO Index scan completed
+2024-01-01T10:05:23 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:24 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:05:25 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:26 INFO Vacuum completed on table orders
+2024-01-01T10:05:27 INFO Vacuum completed on table orders
+2024-01-01T10:05:28 INFO Replication lag check: 0ms
+2024-01-01T10:05:29 INFO Vacuum completed on table orders
+2024-01-01T10:05:30 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:05:31 INFO Replication lag check: 0ms
+2024-01-01T10:05:32 INFO Replication lag check: 0ms
+2024-01-01T10:05:33 INFO Connection released back to pool
+2024-01-01T10:05:34 INFO Replication lag check: 0ms
+2024-01-01T10:05:35 INFO Connection acquired from pool
+2024-01-01T10:05:36 INFO Replication lag check: 0ms
+2024-01-01T10:05:37 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:05:38 INFO Index scan completed
+2024-01-01T10:05:39 INFO Index scan completed
+2024-01-01T10:05:40 INFO Connection acquired from pool
+2024-01-01T10:05:41 INFO Vacuum completed on table orders
+2024-01-01T10:05:42 INFO Replication lag check: 0ms
+2024-01-01T10:05:43 INFO Transaction committed
+2024-01-01T10:05:44 INFO Connection released back to pool
+2024-01-01T10:05:45 INFO Connection released back to pool
+2024-01-01T10:05:46 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:05:47 INFO Connection released back to pool
+2024-01-01T10:05:48 INFO Connection released back to pool
+2024-01-01T10:05:49 INFO Transaction committed
+2024-01-01T10:05:50 INFO Transaction committed
+2024-01-01T10:05:51 INFO Connection acquired from pool
+2024-01-01T10:05:52 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:53 WARN Replication lag exceeds threshold: 8200ms
+2024-01-01T10:05:54 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:55 INFO Vacuum completed on table orders
+2024-01-01T10:05:56 INFO Transaction committed
+2024-01-01T10:05:57 INFO Vacuum completed on table orders
+2024-01-01T10:05:58 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:05:59 INFO Index scan completed
+2024-01-01T10:06:00 INFO Replication lag check: 0ms
+2024-01-01T10:06:01 INFO Connection released back to pool
+2024-01-01T10:06:02 INFO Transaction committed
+2024-01-01T10:06:03 INFO Connection acquired from pool
+2024-01-01T10:06:04 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:06:05 INFO Vacuum completed on table orders
+2024-01-01T10:06:06 INFO Connection released back to pool
+2024-01-01T10:06:07 INFO Transaction committed
+2024-01-01T10:06:08 INFO Connection acquired from pool
+2024-01-01T10:06:09 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:06:10 INFO Connection released back to pool
+2024-01-01T10:06:11 INFO Transaction committed
+2024-01-01T10:06:12 INFO Connection released back to pool
+2024-01-01T10:06:13 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:14 INFO Connection released back to pool
+2024-01-01T10:06:15 INFO Transaction committed
+2024-01-01T10:06:16 INFO Connection released back to pool
+2024-01-01T10:06:17 INFO Index scan completed
+2024-01-01T10:06:18 INFO Connection acquired from pool
+2024-01-01T10:06:19 INFO Replication lag check: 0ms
+2024-01-01T10:06:20 INFO Vacuum completed on table orders
+2024-01-01T10:06:21 INFO Transaction committed
+2024-01-01T10:06:22 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:06:23 INFO Connection acquired from pool
+2024-01-01T10:06:24 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:25 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:06:26 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:06:27 INFO Transaction committed
+2024-01-01T10:06:28 INFO Connection acquired from pool
+2024-01-01T10:06:29 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:06:30 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:31 INFO Transaction committed
+2024-01-01T10:06:32 INFO Transaction committed
+2024-01-01T10:06:33 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:34 INFO Transaction committed
+2024-01-01T10:06:35 INFO Index scan completed
+2024-01-01T10:06:36 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:06:37 INFO Transaction committed
+2024-01-01T10:06:38 INFO Replication lag check: 0ms
+2024-01-01T10:06:39 INFO Connection acquired from pool
+2024-01-01T10:06:40 INFO Transaction committed
+2024-01-01T10:06:41 ERROR Connection refused by replica db-replica-2
+  at ReplicaPool.connect(replica_pool.py:33)
+  at DBClient.read(db_client.py:101)
+2024-01-01T10:06:42 INFO Connection acquired from pool
+2024-01-01T10:06:43 INFO Connection acquired from pool
+2024-01-01T10:06:44 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:45 INFO Index scan completed
+2024-01-01T10:06:46 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:47 INFO Index scan completed
+2024-01-01T10:06:48 INFO Connection released back to pool
+2024-01-01T10:06:49 INFO Vacuum completed on table orders
+2024-01-01T10:06:50 INFO Index scan completed
+2024-01-01T10:06:51 INFO Vacuum completed on table orders
+2024-01-01T10:06:52 INFO Transaction committed
+2024-01-01T10:06:53 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:54 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:55 INFO Replication lag check: 0ms
+2024-01-01T10:06:56 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:06:57 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:06:58 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:06:59 INFO Vacuum completed on table orders
+2024-01-01T10:07:00 INFO Replication lag check: 0ms
+2024-01-01T10:07:01 INFO Connection acquired from pool
+2024-01-01T10:07:02 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:07:03 INFO Connection acquired from pool
+2024-01-01T10:07:04 INFO Connection released back to pool
+2024-01-01T10:07:05 INFO Transaction committed
+2024-01-01T10:07:06 INFO Vacuum completed on table orders
+2024-01-01T10:07:07 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:07:08 INFO Connection acquired from pool
+2024-01-01T10:07:09 INFO Connection released back to pool
+2024-01-01T10:07:10 INFO Vacuum completed on table orders
+2024-01-01T10:07:11 INFO Transaction committed
+2024-01-01T10:07:12 INFO Query executed: UPDATE orders SET status=?
+2024-01-01T10:07:13 ERROR Deadlock detected on table orders
+Traceback (most recent call last):
+  File "db_client.py", line 201, in write
+DeadlockError: transaction rolled back
+2024-01-01T10:07:14 INFO Transaction committed
+2024-01-01T10:07:15 INFO Connection acquired from pool
+2024-01-01T10:07:16 INFO Index scan completed
+2024-01-01T10:07:17 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:07:18 INFO Query executed: SELECT * FROM users WHERE id=?
+2024-01-01T10:07:19 INFO Transaction committed
+2024-01-01T10:07:20 INFO Index scan completed
+2024-01-01T10:07:21 INFO Connection acquired from pool
+2024-01-01T10:07:22 INFO Transaction committed
+2024-01-01T10:07:23 INFO Replication lag check: 0ms
+2024-01-01T10:07:24 INFO Replication lag check: 0ms
+2024-01-01T10:07:25 INFO Replication lag check: 0ms
+2024-01-01T10:07:26 INFO Query executed: UPDATE orders SET status=?

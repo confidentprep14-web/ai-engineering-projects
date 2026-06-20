@@ -1,0 +1,1000 @@
+2024-01-01T10:00:01 INFO Handling request POST /api/orders
+2024-01-01T10:00:02 INFO Handling request GET /api/users/{id}
+2024-01-01T10:00:03 INFO Database query completed in 12ms
+2024-01-01T10:00:04 INFO Cache miss for key session:889
+2024-01-01T10:00:05 INFO Cache miss for key session:889
+2024-01-01T10:00:06 INFO Cache hit for key user:1042
+2024-01-01T10:00:07 INFO Handling request POST /api/orders
+2024-01-01T10:00:08 INFO User authenticated successfully
+2024-01-01T10:00:09 INFO Handling request POST /api/orders
+2024-01-01T10:00:10 INFO Rate limiter check passed
+2024-01-01T10:00:11 INFO Health check passed
+2024-01-01T10:00:12 INFO Handling request GET /api/users/{id}
+2024-01-01T10:00:13 INFO Handling request GET /api/users/{id}
+2024-01-01T10:00:14 INFO Handling request POST /api/orders
+2024-01-01T10:00:15 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:00:16 INFO Cache miss for key session:889
+2024-01-01T10:00:17 INFO User authenticated successfully
+2024-01-01T10:00:18 INFO Rate limiter check passed
+2024-01-01T10:00:19 INFO Handling request GET /api/users/{id}
+2024-01-01T10:00:20 INFO User authenticated successfully
+2024-01-01T10:00:21 INFO Cache miss for key session:889
+2024-01-01T10:00:22 INFO User authenticated successfully
+2024-01-01T10:00:23 INFO Health check passed
+2024-01-01T10:00:24 INFO Cache miss for key session:889
+2024-01-01T10:00:25 INFO Scheduled job heartbeat tick
+2024-01-01T10:00:26 INFO Rate limiter check passed
+2024-01-01T10:00:27 INFO Database query completed in 12ms
+2024-01-01T10:00:28 INFO Handling request GET /api/users/{id}
+2024-01-01T10:00:29 WARN Slow query detected: SELECT * FROM orders took 4200ms
+2024-01-01T10:00:30 INFO Cache hit for key user:1042
+2024-01-01T10:00:31 INFO Health check passed
+2024-01-01T10:00:32 INFO Request processed successfully
+2024-01-01T10:00:33 INFO Database query completed in 12ms
+2024-01-01T10:00:34 INFO Cache hit for key user:1042
+2024-01-01T10:00:35 INFO Cache miss for key session:889
+2024-01-01T10:00:36 INFO Request processed successfully
+2024-01-01T10:00:37 INFO Handling request POST /api/orders
+2024-01-01T10:00:38 INFO Handling request POST /api/orders
+2024-01-01T10:00:39 INFO Health check passed
+2024-01-01T10:00:40 INFO Handling request POST /api/orders
+2024-01-01T10:00:41 INFO Request processed successfully
+2024-01-01T10:00:42 INFO Request processed successfully
+2024-01-01T10:00:43 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:00:44 INFO Database query completed in 12ms
+2024-01-01T10:00:45 INFO Handling request GET /api/users/{id}
+2024-01-01T10:00:46 INFO Scheduled job heartbeat tick
+2024-01-01T10:00:47 INFO User authenticated successfully
+2024-01-01T10:00:48 INFO Handling request POST /api/orders
+2024-01-01T10:00:49 INFO Health check passed
+2024-01-01T10:00:50 INFO Handling request POST /api/orders
+2024-01-01T10:00:51 INFO User authenticated successfully
+2024-01-01T10:00:52 INFO Database query completed in 12ms
+2024-01-01T10:00:53 INFO Rate limiter check passed
+2024-01-01T10:00:54 INFO Request processed successfully
+2024-01-01T10:00:55 INFO Rate limiter check passed
+2024-01-01T10:00:56 INFO Cache miss for key session:889
+2024-01-01T10:00:57 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:00:58 INFO Handling request POST /api/orders
+2024-01-01T10:00:59 INFO Handling request GET /api/users/{id}
+2024-01-01T10:01:00 INFO Cache miss for key session:889
+2024-01-01T10:01:01 INFO Database query completed in 12ms
+2024-01-01T10:01:02 INFO Handling request POST /api/orders
+2024-01-01T10:01:03 INFO Cache miss for key session:889
+2024-01-01T10:01:04 INFO Handling request POST /api/orders
+2024-01-01T10:01:05 INFO Health check passed
+2024-01-01T10:01:06 INFO Database query completed in 12ms
+2024-01-01T10:01:07 INFO Scheduled job heartbeat tick
+2024-01-01T10:01:08 INFO Request processed successfully
+2024-01-01T10:01:09 INFO Cache hit for key user:1042
+2024-01-01T10:01:10 INFO Request processed successfully
+2024-01-01T10:01:11 WARN Connection pool nearing capacity (18/20 in use)
+2024-01-01T10:01:12 INFO Cache miss for key session:889
+2024-01-01T10:01:13 INFO Database query completed in 12ms
+2024-01-01T10:01:14 INFO Handling request POST /api/orders
+2024-01-01T10:01:15 INFO Rate limiter check passed
+2024-01-01T10:01:16 INFO Cache hit for key user:1042
+2024-01-01T10:01:17 INFO User authenticated successfully
+2024-01-01T10:01:18 INFO Cache miss for key session:889
+2024-01-01T10:01:19 INFO Cache hit for key user:1042
+2024-01-01T10:01:20 INFO Scheduled job heartbeat tick
+2024-01-01T10:01:21 INFO Health check passed
+2024-01-01T10:01:22 INFO Database query completed in 12ms
+2024-01-01T10:01:23 INFO User authenticated successfully
+2024-01-01T10:01:24 INFO Cache miss for key session:889
+2024-01-01T10:01:25 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:01:26 INFO Request processed successfully
+2024-01-01T10:01:27 INFO Handling request GET /api/users/{id}
+2024-01-01T10:01:28 INFO Cache miss for key session:889
+2024-01-01T10:01:29 INFO Handling request GET /api/users/{id}
+2024-01-01T10:01:30 INFO Request processed successfully
+2024-01-01T10:01:31 INFO Health check passed
+2024-01-01T10:01:32 INFO Database query completed in 12ms
+2024-01-01T10:01:33 INFO Handling request POST /api/orders
+2024-01-01T10:01:34 INFO Cache miss for key session:889
+2024-01-01T10:01:35 INFO Rate limiter check passed
+2024-01-01T10:01:36 INFO Request processed successfully
+2024-01-01T10:01:37 INFO Cache miss for key session:889
+2024-01-01T10:01:38 INFO Scheduled job heartbeat tick
+2024-01-01T10:01:39 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:01:40 INFO Scheduled job heartbeat tick
+2024-01-01T10:01:41 INFO Cache hit for key user:1042
+2024-01-01T10:01:42 INFO Database query completed in 12ms
+2024-01-01T10:01:43 INFO Cache hit for key user:1042
+2024-01-01T10:01:44 INFO Cache miss for key session:889
+2024-01-01T10:01:45 INFO User authenticated successfully
+2024-01-01T10:01:46 INFO User authenticated successfully
+2024-01-01T10:01:47 INFO Database query completed in 12ms
+2024-01-01T10:01:48 INFO Rate limiter check passed
+2024-01-01T10:01:49 INFO Health check passed
+2024-01-01T10:01:50 INFO Rate limiter check passed
+2024-01-01T10:01:51 INFO Health check passed
+2024-01-01T10:01:52 INFO Request processed successfully
+2024-01-01T10:01:53 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:01:54 INFO Cache hit for key user:1042
+2024-01-01T10:01:55 INFO User authenticated successfully
+2024-01-01T10:01:56 INFO Scheduled job heartbeat tick
+2024-01-01T10:01:57 INFO Handling request POST /api/orders
+2024-01-01T10:01:58 INFO Handling request GET /api/users/{id}
+2024-01-01T10:01:59 INFO Handling request POST /api/orders
+2024-01-01T10:02:00 INFO Cache hit for key user:1042
+2024-01-01T10:02:01 INFO Cache hit for key user:1042
+2024-01-01T10:02:02 INFO Health check passed
+2024-01-01T10:02:03 INFO Rate limiter check passed
+2024-01-01T10:02:04 INFO Handling request POST /api/orders
+2024-01-01T10:02:05 INFO Health check passed
+2024-01-01T10:02:06 INFO Health check passed
+2024-01-01T10:02:07 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:02:08 INFO Scheduled job heartbeat tick
+2024-01-01T10:02:09 INFO User authenticated successfully
+2024-01-01T10:02:10 INFO Database query completed in 12ms
+2024-01-01T10:02:11 INFO User authenticated successfully
+2024-01-01T10:02:12 INFO Handling request GET /api/users/{id}
+2024-01-01T10:02:13 INFO Handling request POST /api/orders
+2024-01-01T10:02:14 INFO User authenticated successfully
+2024-01-01T10:02:15 INFO Database query completed in 12ms
+2024-01-01T10:02:16 INFO Request processed successfully
+2024-01-01T10:02:17 INFO Handling request POST /api/orders
+2024-01-01T10:02:18 INFO Database query completed in 12ms
+2024-01-01T10:02:19 INFO Health check passed
+2024-01-01T10:02:20 INFO Cache hit for key user:1042
+2024-01-01T10:02:21 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:02:22 INFO Handling request GET /api/users/{id}
+2024-01-01T10:02:23 INFO Database query completed in 12ms
+2024-01-01T10:02:24 INFO User authenticated successfully
+2024-01-01T10:02:25 INFO Cache hit for key user:1042
+2024-01-01T10:02:26 INFO User authenticated successfully
+2024-01-01T10:02:27 INFO Handling request POST /api/orders
+2024-01-01T10:02:28 INFO Database query completed in 12ms
+2024-01-01T10:02:29 INFO User authenticated successfully
+2024-01-01T10:02:30 INFO Rate limiter check passed
+2024-01-01T10:02:31 INFO Cache miss for key session:889
+2024-01-01T10:02:32 INFO Cache hit for key user:1042
+2024-01-01T10:02:33 INFO Request processed successfully
+2024-01-01T10:02:34 INFO Cache hit for key user:1042
+2024-01-01T10:02:35 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:02:36 INFO User authenticated successfully
+2024-01-01T10:02:37 INFO Handling request GET /api/users/{id}
+2024-01-01T10:02:38 INFO Rate limiter check passed
+2024-01-01T10:02:39 INFO Request processed successfully
+2024-01-01T10:02:40 INFO Scheduled job heartbeat tick
+2024-01-01T10:02:41 INFO Handling request GET /api/users/{id}
+2024-01-01T10:02:42 INFO Handling request POST /api/orders
+2024-01-01T10:02:43 INFO Request processed successfully
+2024-01-01T10:02:44 INFO Database query completed in 12ms
+2024-01-01T10:02:45 INFO Cache miss for key session:889
+2024-01-01T10:02:46 INFO Handling request GET /api/users/{id}
+2024-01-01T10:02:47 INFO Cache miss for key session:889
+2024-01-01T10:02:48 INFO Rate limiter check passed
+2024-01-01T10:02:49 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:02:50 INFO Handling request POST /api/orders
+2024-01-01T10:02:51 INFO Scheduled job heartbeat tick
+2024-01-01T10:02:52 INFO Handling request POST /api/orders
+2024-01-01T10:02:53 INFO User authenticated successfully
+2024-01-01T10:02:54 INFO Cache hit for key user:1042
+2024-01-01T10:02:55 INFO Cache hit for key user:1042
+2024-01-01T10:02:56 INFO Scheduled job heartbeat tick
+2024-01-01T10:02:57 INFO User authenticated successfully
+2024-01-01T10:02:58 INFO Cache hit for key user:1042
+2024-01-01T10:02:59 INFO Database query completed in 12ms
+2024-01-01T10:03:00 INFO User authenticated successfully
+2024-01-01T10:03:01 INFO Rate limiter check passed
+2024-01-01T10:03:02 INFO Health check passed
+2024-01-01T10:03:03 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:03:04 INFO User authenticated successfully
+2024-01-01T10:03:05 INFO Cache miss for key session:889
+2024-01-01T10:03:06 INFO Database query completed in 12ms
+2024-01-01T10:03:07 INFO Health check passed
+2024-01-01T10:03:08 INFO Request processed successfully
+2024-01-01T10:03:09 INFO Scheduled job heartbeat tick
+2024-01-01T10:03:10 INFO User authenticated successfully
+2024-01-01T10:03:11 INFO Scheduled job heartbeat tick
+2024-01-01T10:03:12 INFO Handling request POST /api/orders
+2024-01-01T10:03:13 INFO Cache miss for key session:889
+2024-01-01T10:03:14 INFO Cache miss for key session:889
+2024-01-01T10:03:15 INFO Handling request POST /api/orders
+2024-01-01T10:03:16 INFO Request processed successfully
+2024-01-01T10:03:17 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:03:18 INFO Rate limiter check passed
+2024-01-01T10:03:19 INFO User authenticated successfully
+2024-01-01T10:03:20 INFO Cache miss for key session:889
+2024-01-01T10:03:21 INFO Rate limiter check passed
+2024-01-01T10:03:22 INFO Cache miss for key session:889
+2024-01-01T10:03:23 INFO Handling request GET /api/users/{id}
+2024-01-01T10:03:24 INFO Handling request POST /api/orders
+2024-01-01T10:03:25 INFO Handling request GET /api/users/{id}
+2024-01-01T10:03:26 INFO Cache miss for key session:889
+2024-01-01T10:03:27 INFO Handling request POST /api/orders
+2024-01-01T10:03:28 INFO Handling request GET /api/users/{id}
+2024-01-01T10:03:29 INFO Request processed successfully
+2024-01-01T10:03:30 INFO Handling request POST /api/orders
+2024-01-01T10:03:31 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:03:32 INFO Cache miss for key session:889
+2024-01-01T10:03:33 INFO Database query completed in 12ms
+2024-01-01T10:03:34 INFO Scheduled job heartbeat tick
+2024-01-01T10:03:35 INFO Cache miss for key session:889
+2024-01-01T10:03:36 INFO User authenticated successfully
+2024-01-01T10:03:37 INFO Cache hit for key user:1042
+2024-01-01T10:03:38 INFO Rate limiter check passed
+2024-01-01T10:03:39 INFO Rate limiter check passed
+2024-01-01T10:03:40 INFO Scheduled job heartbeat tick
+2024-01-01T10:03:41 INFO Cache miss for key session:889
+2024-01-01T10:03:42 INFO Scheduled job heartbeat tick
+2024-01-01T10:03:43 INFO Health check passed
+2024-01-01T10:03:44 INFO Cache miss for key session:889
+2024-01-01T10:03:45 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:03:46 INFO Handling request POST /api/orders
+2024-01-01T10:03:47 INFO Health check passed
+2024-01-01T10:03:48 INFO Request processed successfully
+2024-01-01T10:03:49 INFO Health check passed
+2024-01-01T10:03:50 INFO Health check passed
+2024-01-01T10:03:51 INFO Scheduled job heartbeat tick
+2024-01-01T10:03:52 INFO Handling request GET /api/users/{id}
+2024-01-01T10:03:53 INFO Handling request POST /api/orders
+2024-01-01T10:03:54 INFO Handling request GET /api/users/{id}
+2024-01-01T10:03:55 INFO Health check passed
+2024-01-01T10:03:56 INFO Request processed successfully
+2024-01-01T10:03:57 INFO Handling request POST /api/orders
+2024-01-01T10:03:58 INFO Cache miss for key session:889
+2024-01-01T10:03:59 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:04:00 INFO Cache miss for key session:889
+2024-01-01T10:04:01 INFO User authenticated successfully
+2024-01-01T10:04:02 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:03 INFO Cache hit for key user:1042
+2024-01-01T10:04:04 INFO Health check passed
+2024-01-01T10:04:05 INFO Cache hit for key user:1042
+2024-01-01T10:04:06 INFO Database query completed in 12ms
+2024-01-01T10:04:07 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:08 INFO Cache miss for key session:889
+2024-01-01T10:04:09 INFO Handling request POST /api/orders
+2024-01-01T10:04:10 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:11 INFO User authenticated successfully
+2024-01-01T10:04:12 INFO Handling request POST /api/orders
+2024-01-01T10:04:13 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:04:14 INFO User authenticated successfully
+2024-01-01T10:04:15 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:16 INFO Handling request POST /api/orders
+2024-01-01T10:04:17 INFO Cache miss for key session:889
+2024-01-01T10:04:18 INFO Cache hit for key user:1042
+2024-01-01T10:04:19 INFO Health check passed
+2024-01-01T10:04:20 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:21 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:22 INFO Cache miss for key session:889
+2024-01-01T10:04:23 INFO Health check passed
+2024-01-01T10:04:24 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:25 INFO Cache hit for key user:1042
+2024-01-01T10:04:26 INFO Health check passed
+2024-01-01T10:04:27 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:04:28 INFO Health check passed
+2024-01-01T10:04:29 INFO Database query completed in 12ms
+2024-01-01T10:04:30 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:31 INFO Database query completed in 12ms
+2024-01-01T10:04:32 INFO Health check passed
+2024-01-01T10:04:33 INFO User authenticated successfully
+2024-01-01T10:04:34 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:35 INFO Cache hit for key user:1042
+2024-01-01T10:04:36 INFO Cache miss for key session:889
+2024-01-01T10:04:37 INFO Database query completed in 12ms
+2024-01-01T10:04:38 INFO Cache miss for key session:889
+2024-01-01T10:04:39 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:40 INFO Rate limiter check passed
+2024-01-01T10:04:41 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:04:42 INFO User authenticated successfully
+2024-01-01T10:04:43 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:44 INFO Request processed successfully
+2024-01-01T10:04:45 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:46 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:47 INFO Rate limiter check passed
+2024-01-01T10:04:48 INFO Scheduled job heartbeat tick
+2024-01-01T10:04:49 INFO User authenticated successfully
+2024-01-01T10:04:50 INFO User authenticated successfully
+2024-01-01T10:04:51 INFO Cache hit for key user:1042
+2024-01-01T10:04:52 INFO Handling request GET /api/users/{id}
+2024-01-01T10:04:53 INFO User authenticated successfully
+2024-01-01T10:04:54 INFO Handling request POST /api/orders
+2024-01-01T10:04:55 WARN Slow query detected: SELECT * FROM orders took 4200ms
+2024-01-01T10:04:56 INFO Cache hit for key user:1042
+2024-01-01T10:04:57 INFO Handling request POST /api/orders
+2024-01-01T10:04:58 INFO Rate limiter check passed
+2024-01-01T10:04:59 INFO Handling request POST /api/orders
+2024-01-01T10:05:00 INFO Cache miss for key session:889
+2024-01-01T10:05:01 INFO Health check passed
+2024-01-01T10:05:02 INFO Handling request POST /api/orders
+2024-01-01T10:05:03 INFO Rate limiter check passed
+2024-01-01T10:05:04 INFO Cache miss for key session:889
+2024-01-01T10:05:05 INFO Rate limiter check passed
+2024-01-01T10:05:06 INFO Rate limiter check passed
+2024-01-01T10:05:07 INFO Handling request GET /api/users/{id}
+2024-01-01T10:05:08 INFO Rate limiter check passed
+2024-01-01T10:05:09 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:05:10 INFO Health check passed
+2024-01-01T10:05:11 INFO Rate limiter check passed
+2024-01-01T10:05:12 INFO Rate limiter check passed
+2024-01-01T10:05:13 INFO User authenticated successfully
+2024-01-01T10:05:14 INFO Request processed successfully
+2024-01-01T10:05:15 INFO Database query completed in 12ms
+2024-01-01T10:05:16 INFO Cache miss for key session:889
+2024-01-01T10:05:17 INFO Request processed successfully
+2024-01-01T10:05:18 INFO Cache miss for key session:889
+2024-01-01T10:05:19 INFO Database query completed in 12ms
+2024-01-01T10:05:20 INFO Health check passed
+2024-01-01T10:05:21 INFO Cache hit for key user:1042
+2024-01-01T10:05:22 INFO Database query completed in 12ms
+2024-01-01T10:05:23 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:05:24 INFO Request processed successfully
+2024-01-01T10:05:25 INFO Handling request POST /api/orders
+2024-01-01T10:05:26 INFO Handling request GET /api/users/{id}
+2024-01-01T10:05:27 INFO Scheduled job heartbeat tick
+2024-01-01T10:05:28 INFO Rate limiter check passed
+2024-01-01T10:05:29 INFO Rate limiter check passed
+2024-01-01T10:05:30 INFO Handling request POST /api/orders
+2024-01-01T10:05:31 INFO Handling request POST /api/orders
+2024-01-01T10:05:32 INFO User authenticated successfully
+2024-01-01T10:05:33 INFO Cache miss for key session:889
+2024-01-01T10:05:34 INFO User authenticated successfully
+2024-01-01T10:05:35 INFO Database query completed in 12ms
+2024-01-01T10:05:36 INFO Cache hit for key user:1042
+2024-01-01T10:05:37 WARN Connection pool nearing capacity (18/20 in use)
+2024-01-01T10:05:38 INFO Handling request POST /api/orders
+2024-01-01T10:05:39 INFO Cache miss for key session:889
+2024-01-01T10:05:40 INFO Request processed successfully
+2024-01-01T10:05:41 INFO Database query completed in 12ms
+2024-01-01T10:05:42 INFO Cache hit for key user:1042
+2024-01-01T10:05:43 INFO Scheduled job heartbeat tick
+2024-01-01T10:05:44 INFO User authenticated successfully
+2024-01-01T10:05:45 INFO Database query completed in 12ms
+2024-01-01T10:05:46 INFO Rate limiter check passed
+2024-01-01T10:05:47 INFO User authenticated successfully
+2024-01-01T10:05:48 INFO Handling request GET /api/users/{id}
+2024-01-01T10:05:49 INFO User authenticated successfully
+2024-01-01T10:05:50 INFO Database query completed in 12ms
+2024-01-01T10:05:51 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:05:52 INFO Handling request POST /api/orders
+2024-01-01T10:05:53 INFO Cache hit for key user:1042
+2024-01-01T10:05:54 INFO Database query completed in 12ms
+2024-01-01T10:05:55 INFO Handling request POST /api/orders
+2024-01-01T10:05:56 INFO Handling request POST /api/orders
+2024-01-01T10:05:57 INFO User authenticated successfully
+2024-01-01T10:05:58 INFO Cache hit for key user:1042
+2024-01-01T10:05:59 INFO Database query completed in 12ms
+2024-01-01T10:06:00 INFO Database query completed in 12ms
+2024-01-01T10:06:01 INFO Rate limiter check passed
+2024-01-01T10:06:02 INFO Cache miss for key session:889
+2024-01-01T10:06:03 INFO Request processed successfully
+2024-01-01T10:06:04 INFO Cache miss for key session:889
+2024-01-01T10:06:05 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:06:06 INFO Database query completed in 12ms
+2024-01-01T10:06:07 INFO User authenticated successfully
+2024-01-01T10:06:08 INFO Scheduled job heartbeat tick
+2024-01-01T10:06:09 INFO Database query completed in 12ms
+2024-01-01T10:06:10 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:11 INFO Handling request POST /api/orders
+2024-01-01T10:06:12 INFO Health check passed
+2024-01-01T10:06:13 INFO Database query completed in 12ms
+2024-01-01T10:06:14 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:15 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:16 INFO Request processed successfully
+2024-01-01T10:06:17 INFO Cache hit for key user:1042
+2024-01-01T10:06:18 INFO Database query completed in 12ms
+2024-01-01T10:06:19 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:06:20 INFO Scheduled job heartbeat tick
+2024-01-01T10:06:21 INFO User authenticated successfully
+2024-01-01T10:06:22 INFO Health check passed
+2024-01-01T10:06:23 INFO User authenticated successfully
+2024-01-01T10:06:24 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:25 INFO Handling request POST /api/orders
+2024-01-01T10:06:26 INFO Handling request POST /api/orders
+2024-01-01T10:06:27 INFO Cache hit for key user:1042
+2024-01-01T10:06:28 INFO User authenticated successfully
+2024-01-01T10:06:29 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:30 INFO Request processed successfully
+2024-01-01T10:06:31 INFO Rate limiter check passed
+2024-01-01T10:06:32 INFO User authenticated successfully
+2024-01-01T10:06:33 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:06:34 INFO Health check passed
+2024-01-01T10:06:35 INFO Cache hit for key user:1042
+2024-01-01T10:06:36 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:37 INFO Database query completed in 12ms
+2024-01-01T10:06:38 INFO Request processed successfully
+2024-01-01T10:06:39 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:40 INFO Request processed successfully
+2024-01-01T10:06:41 INFO Cache miss for key session:889
+2024-01-01T10:06:42 INFO Cache miss for key session:889
+2024-01-01T10:06:43 INFO Handling request POST /api/orders
+2024-01-01T10:06:44 INFO Request processed successfully
+2024-01-01T10:06:45 INFO User authenticated successfully
+2024-01-01T10:06:46 INFO Health check passed
+2024-01-01T10:06:47 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:06:48 INFO Cache hit for key user:1042
+2024-01-01T10:06:49 INFO Cache miss for key session:889
+2024-01-01T10:06:50 INFO Cache hit for key user:1042
+2024-01-01T10:06:51 INFO Cache hit for key user:1042
+2024-01-01T10:06:52 INFO Health check passed
+2024-01-01T10:06:53 INFO Handling request GET /api/users/{id}
+2024-01-01T10:06:54 INFO Cache hit for key user:1042
+2024-01-01T10:06:55 INFO Request processed successfully
+2024-01-01T10:06:56 INFO Health check passed
+2024-01-01T10:06:57 INFO Cache miss for key session:889
+2024-01-01T10:06:58 INFO Database query completed in 12ms
+2024-01-01T10:06:59 INFO Cache hit for key user:1042
+2024-01-01T10:07:00 INFO Handling request POST /api/orders
+2024-01-01T10:07:01 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:07:02 INFO Handling request GET /api/users/{id}
+2024-01-01T10:07:03 INFO Scheduled job heartbeat tick
+2024-01-01T10:07:04 INFO Cache miss for key session:889
+2024-01-01T10:07:05 INFO Cache miss for key session:889
+2024-01-01T10:07:06 INFO Scheduled job heartbeat tick
+2024-01-01T10:07:07 INFO Request processed successfully
+2024-01-01T10:07:08 INFO Database query completed in 12ms
+2024-01-01T10:07:09 INFO Cache miss for key session:889
+2024-01-01T10:07:10 INFO Cache miss for key session:889
+2024-01-01T10:07:11 INFO Handling request GET /api/users/{id}
+2024-01-01T10:07:12 INFO Cache miss for key session:889
+2024-01-01T10:07:13 INFO Health check passed
+2024-01-01T10:07:14 INFO Request processed successfully
+2024-01-01T10:07:15 WARN Connection pool nearing capacity (18/20 in use)
+2024-01-01T10:07:16 INFO Handling request POST /api/orders
+2024-01-01T10:07:17 INFO Database query completed in 12ms
+2024-01-01T10:07:18 INFO Request processed successfully
+2024-01-01T10:07:19 INFO User authenticated successfully
+2024-01-01T10:07:20 INFO Health check passed
+2024-01-01T10:07:21 INFO User authenticated successfully
+2024-01-01T10:07:22 INFO Request processed successfully
+2024-01-01T10:07:23 INFO Handling request GET /api/users/{id}
+2024-01-01T10:07:24 INFO Handling request POST /api/orders
+2024-01-01T10:07:25 INFO Database query completed in 12ms
+2024-01-01T10:07:26 INFO Cache hit for key user:1042
+2024-01-01T10:07:27 INFO Rate limiter check passed
+2024-01-01T10:07:28 INFO Database query completed in 12ms
+2024-01-01T10:07:29 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:07:30 INFO Handling request POST /api/orders
+2024-01-01T10:07:31 INFO Rate limiter check passed
+2024-01-01T10:07:32 INFO Health check passed
+2024-01-01T10:07:33 INFO Request processed successfully
+2024-01-01T10:07:34 INFO Request processed successfully
+2024-01-01T10:07:35 INFO Health check passed
+2024-01-01T10:07:36 INFO Rate limiter check passed
+2024-01-01T10:07:37 INFO User authenticated successfully
+2024-01-01T10:07:38 INFO Handling request POST /api/orders
+2024-01-01T10:07:39 INFO Health check passed
+2024-01-01T10:07:40 INFO Rate limiter check passed
+2024-01-01T10:07:41 INFO Cache miss for key session:889
+2024-01-01T10:07:42 INFO Database query completed in 12ms
+2024-01-01T10:07:43 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:07:44 INFO Health check passed
+2024-01-01T10:07:45 INFO Handling request GET /api/users/{id}
+2024-01-01T10:07:46 INFO User authenticated successfully
+2024-01-01T10:07:47 INFO User authenticated successfully
+2024-01-01T10:07:48 INFO Cache miss for key session:889
+2024-01-01T10:07:49 INFO Request processed successfully
+2024-01-01T10:07:50 INFO Health check passed
+2024-01-01T10:07:51 INFO Handling request POST /api/orders
+2024-01-01T10:07:52 INFO Request processed successfully
+2024-01-01T10:07:53 INFO Rate limiter check passed
+2024-01-01T10:07:54 INFO Request processed successfully
+2024-01-01T10:07:55 INFO Handling request POST /api/orders
+2024-01-01T10:07:56 INFO Database query completed in 12ms
+2024-01-01T10:07:57 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:07:58 INFO Database query completed in 12ms
+2024-01-01T10:07:59 INFO Health check passed
+2024-01-01T10:08:00 INFO Request processed successfully
+2024-01-01T10:08:01 INFO Health check passed
+2024-01-01T10:08:02 INFO Database query completed in 12ms
+2024-01-01T10:08:03 INFO User authenticated successfully
+2024-01-01T10:08:04 INFO Cache hit for key user:1042
+2024-01-01T10:08:05 INFO Cache miss for key session:889
+2024-01-01T10:08:06 INFO Health check passed
+2024-01-01T10:08:07 INFO Health check passed
+2024-01-01T10:08:08 INFO Cache hit for key user:1042
+2024-01-01T10:08:09 INFO Rate limiter check passed
+2024-01-01T10:08:10 INFO Rate limiter check passed
+2024-01-01T10:08:11 WARN Connection pool nearing capacity (18/20 in use)
+2024-01-01T10:08:12 INFO Health check passed
+2024-01-01T10:08:13 INFO User authenticated successfully
+2024-01-01T10:08:14 INFO Handling request GET /api/users/{id}
+2024-01-01T10:08:15 INFO Database query completed in 12ms
+2024-01-01T10:08:16 INFO Database query completed in 12ms
+2024-01-01T10:08:17 INFO Cache miss for key session:889
+2024-01-01T10:08:18 INFO Health check passed
+2024-01-01T10:08:19 INFO Rate limiter check passed
+2024-01-01T10:08:20 INFO Rate limiter check passed
+2024-01-01T10:08:21 INFO Request processed successfully
+2024-01-01T10:08:22 INFO Scheduled job heartbeat tick
+2024-01-01T10:08:23 INFO Scheduled job heartbeat tick
+2024-01-01T10:08:24 INFO Scheduled job heartbeat tick
+2024-01-01T10:08:25 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:08:26 INFO Cache miss for key session:889
+2024-01-01T10:08:27 INFO User authenticated successfully
+2024-01-01T10:08:28 INFO Scheduled job heartbeat tick
+2024-01-01T10:08:29 INFO Cache hit for key user:1042
+2024-01-01T10:08:30 INFO Handling request POST /api/orders
+2024-01-01T10:08:31 INFO Database query completed in 12ms
+2024-01-01T10:08:32 INFO User authenticated successfully
+2024-01-01T10:08:33 INFO Rate limiter check passed
+2024-01-01T10:08:34 INFO Request processed successfully
+2024-01-01T10:08:35 INFO Handling request POST /api/orders
+2024-01-01T10:08:36 INFO Cache miss for key session:889
+2024-01-01T10:08:37 INFO Database query completed in 12ms
+2024-01-01T10:08:38 INFO Cache miss for key session:889
+2024-01-01T10:08:39 WARN Slow query detected: SELECT * FROM orders took 4200ms
+2024-01-01T10:08:40 INFO Cache miss for key session:889
+2024-01-01T10:08:41 INFO Cache hit for key user:1042
+2024-01-01T10:08:42 INFO Handling request GET /api/users/{id}
+2024-01-01T10:08:43 INFO Handling request GET /api/users/{id}
+2024-01-01T10:08:44 INFO Cache miss for key session:889
+2024-01-01T10:08:45 INFO Scheduled job heartbeat tick
+2024-01-01T10:08:46 INFO Rate limiter check passed
+2024-01-01T10:08:47 INFO Handling request POST /api/orders
+2024-01-01T10:08:48 INFO Scheduled job heartbeat tick
+2024-01-01T10:08:49 INFO Health check passed
+2024-01-01T10:08:50 INFO Rate limiter check passed
+2024-01-01T10:08:51 INFO Cache miss for key session:889
+2024-01-01T10:08:52 INFO Health check passed
+2024-01-01T10:08:53 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:08:54 INFO Health check passed
+2024-01-01T10:08:55 INFO Cache miss for key session:889
+2024-01-01T10:08:56 INFO Cache hit for key user:1042
+2024-01-01T10:08:57 INFO Handling request GET /api/users/{id}
+2024-01-01T10:08:58 INFO Handling request POST /api/orders
+2024-01-01T10:08:59 INFO Health check passed
+2024-01-01T10:09:00 INFO Cache miss for key session:889
+2024-01-01T10:09:01 INFO Cache hit for key user:1042
+2024-01-01T10:09:02 INFO User authenticated successfully
+2024-01-01T10:09:03 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:04 INFO Handling request GET /api/users/{id}
+2024-01-01T10:09:05 INFO User authenticated successfully
+2024-01-01T10:09:06 INFO Cache miss for key session:889
+2024-01-01T10:09:07 WARN Slow query detected: SELECT * FROM orders took 4200ms
+2024-01-01T10:09:08 INFO Handling request POST /api/orders
+2024-01-01T10:09:09 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:10 INFO Cache hit for key user:1042
+2024-01-01T10:09:11 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:12 INFO User authenticated successfully
+2024-01-01T10:09:13 INFO User authenticated successfully
+2024-01-01T10:09:14 INFO Rate limiter check passed
+2024-01-01T10:09:15 INFO Request processed successfully
+2024-01-01T10:09:16 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:17 INFO Rate limiter check passed
+2024-01-01T10:09:18 INFO User authenticated successfully
+2024-01-01T10:09:19 INFO Health check passed
+2024-01-01T10:09:20 INFO User authenticated successfully
+2024-01-01T10:09:21 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:09:22 INFO Cache hit for key user:1042
+2024-01-01T10:09:23 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:24 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:25 INFO Database query completed in 12ms
+2024-01-01T10:09:26 INFO Cache miss for key session:889
+2024-01-01T10:09:27 INFO Database query completed in 12ms
+2024-01-01T10:09:28 INFO User authenticated successfully
+2024-01-01T10:09:29 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:30 INFO Cache miss for key session:889
+2024-01-01T10:09:31 INFO Database query completed in 12ms
+2024-01-01T10:09:32 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:33 INFO Handling request POST /api/orders
+2024-01-01T10:09:34 INFO Database query completed in 12ms
+2024-01-01T10:09:35 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:09:36 INFO Database query completed in 12ms
+2024-01-01T10:09:37 INFO Request processed successfully
+2024-01-01T10:09:38 INFO Request processed successfully
+2024-01-01T10:09:39 INFO User authenticated successfully
+2024-01-01T10:09:40 INFO Handling request POST /api/orders
+2024-01-01T10:09:41 INFO Cache hit for key user:1042
+2024-01-01T10:09:42 INFO Cache hit for key user:1042
+2024-01-01T10:09:43 INFO Cache miss for key session:889
+2024-01-01T10:09:44 INFO Health check passed
+2024-01-01T10:09:45 INFO Cache hit for key user:1042
+2024-01-01T10:09:46 INFO Cache miss for key session:889
+2024-01-01T10:09:47 INFO Handling request POST /api/orders
+2024-01-01T10:09:48 INFO Health check passed
+2024-01-01T10:09:49 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:09:50 INFO Request processed successfully
+2024-01-01T10:09:51 INFO User authenticated successfully
+2024-01-01T10:09:52 INFO Scheduled job heartbeat tick
+2024-01-01T10:09:53 INFO Health check passed
+2024-01-01T10:09:54 INFO Handling request GET /api/users/{id}
+2024-01-01T10:09:55 INFO Cache miss for key session:889
+2024-01-01T10:09:56 INFO Health check passed
+2024-01-01T10:09:57 INFO Health check passed
+2024-01-01T10:09:58 INFO Rate limiter check passed
+2024-01-01T10:09:59 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:00 INFO Rate limiter check passed
+2024-01-01T10:10:01 INFO Health check passed
+2024-01-01T10:10:02 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:03 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:10:04 INFO Request processed successfully
+2024-01-01T10:10:05 INFO Database query completed in 12ms
+2024-01-01T10:10:06 INFO Health check passed
+2024-01-01T10:10:07 INFO Health check passed
+2024-01-01T10:10:08 INFO User authenticated successfully
+2024-01-01T10:10:09 INFO User authenticated successfully
+2024-01-01T10:10:10 INFO Rate limiter check passed
+2024-01-01T10:10:11 INFO Cache miss for key session:889
+2024-01-01T10:10:12 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:13 INFO Cache miss for key session:889
+2024-01-01T10:10:14 INFO Database query completed in 12ms
+2024-01-01T10:10:15 INFO Health check passed
+2024-01-01T10:10:16 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:17 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:10:18 INFO Health check passed
+2024-01-01T10:10:19 INFO Request processed successfully
+2024-01-01T10:10:20 INFO Health check passed
+2024-01-01T10:10:21 INFO Cache hit for key user:1042
+2024-01-01T10:10:22 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:23 INFO Cache hit for key user:1042
+2024-01-01T10:10:24 INFO Rate limiter check passed
+2024-01-01T10:10:25 INFO User authenticated successfully
+2024-01-01T10:10:26 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:27 INFO Health check passed
+2024-01-01T10:10:28 INFO Rate limiter check passed
+2024-01-01T10:10:29 INFO Rate limiter check passed
+2024-01-01T10:10:30 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:31 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:10:32 INFO Health check passed
+2024-01-01T10:10:33 INFO Cache hit for key user:1042
+2024-01-01T10:10:34 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:35 INFO Cache hit for key user:1042
+2024-01-01T10:10:36 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:37 INFO Database query completed in 12ms
+2024-01-01T10:10:38 INFO Health check passed
+2024-01-01T10:10:39 INFO Request processed successfully
+2024-01-01T10:10:40 INFO Cache miss for key session:889
+2024-01-01T10:10:41 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:42 INFO Request processed successfully
+2024-01-01T10:10:43 INFO Request processed successfully
+2024-01-01T10:10:44 INFO Health check passed
+2024-01-01T10:10:45 WARN Connection pool nearing capacity (18/20 in use)
+2024-01-01T10:10:46 INFO Health check passed
+2024-01-01T10:10:47 INFO Database query completed in 12ms
+2024-01-01T10:10:48 INFO Handling request POST /api/orders
+2024-01-01T10:10:49 INFO Scheduled job heartbeat tick
+2024-01-01T10:10:50 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:51 INFO User authenticated successfully
+2024-01-01T10:10:52 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:53 INFO Request processed successfully
+2024-01-01T10:10:54 INFO Cache miss for key session:889
+2024-01-01T10:10:55 INFO Handling request POST /api/orders
+2024-01-01T10:10:56 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:57 INFO Handling request GET /api/users/{id}
+2024-01-01T10:10:58 INFO Cache miss for key session:889
+2024-01-01T10:10:59 ERROR Unhandled exception in request handler
+Traceback (most recent call last):
+  File "main.py", line 55, in handle_request
+  File "order_service.py", line 142, in charge
+ValueError: invalid order total -1
+2024-01-01T10:11:00 INFO Handling request GET /api/users/{id}
+2024-01-01T10:11:01 INFO Rate limiter check passed
+2024-01-01T10:11:02 INFO Cache hit for key user:1042
+2024-01-01T10:11:03 INFO Cache miss for key session:889
+2024-01-01T10:11:04 INFO Cache hit for key user:1042
+2024-01-01T10:11:05 INFO Scheduled job heartbeat tick
+2024-01-01T10:11:06 INFO Handling request POST /api/orders
+2024-01-01T10:11:07 INFO Rate limiter check passed
+2024-01-01T10:11:08 INFO Cache miss for key session:889
+2024-01-01T10:11:09 INFO Scheduled job heartbeat tick
+2024-01-01T10:11:10 INFO Database query completed in 12ms
+2024-01-01T10:11:11 INFO Request processed successfully
+2024-01-01T10:11:12 INFO Cache hit for key user:1042
+2024-01-01T10:11:13 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:11:14 INFO Rate limiter check passed
+2024-01-01T10:11:15 INFO Handling request POST /api/orders
+2024-01-01T10:11:16 INFO Cache hit for key user:1042
+2024-01-01T10:11:17 INFO Database query completed in 12ms
+2024-01-01T10:11:18 INFO Handling request POST /api/orders
+2024-01-01T10:11:19 INFO Rate limiter check passed
+2024-01-01T10:11:20 INFO Handling request GET /api/users/{id}
+2024-01-01T10:11:21 INFO Database query completed in 12ms
+2024-01-01T10:11:22 INFO Rate limiter check passed
+2024-01-01T10:11:23 INFO Health check passed
+2024-01-01T10:11:24 INFO Health check passed
+2024-01-01T10:11:25 INFO Cache miss for key session:889
+2024-01-01T10:11:26 INFO Handling request POST /api/orders
+2024-01-01T10:11:27 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:11:28 INFO Cache miss for key session:889
+2024-01-01T10:11:29 INFO Handling request POST /api/orders
+2024-01-01T10:11:30 INFO Database query completed in 12ms
+2024-01-01T10:11:31 INFO Rate limiter check passed
+2024-01-01T10:11:32 INFO Handling request POST /api/orders
+2024-01-01T10:11:33 INFO Rate limiter check passed
+2024-01-01T10:11:34 INFO Handling request GET /api/users/{id}
+2024-01-01T10:11:35 INFO Request processed successfully
+2024-01-01T10:11:36 INFO User authenticated successfully
+2024-01-01T10:11:37 INFO Health check passed
+2024-01-01T10:11:38 INFO Request processed successfully
+2024-01-01T10:11:39 INFO Handling request POST /api/orders
+2024-01-01T10:11:40 INFO User authenticated successfully
+2024-01-01T10:11:41 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:11:42 INFO Request processed successfully
+2024-01-01T10:11:43 INFO Handling request GET /api/users/{id}
+2024-01-01T10:11:44 INFO Health check passed
+2024-01-01T10:11:45 INFO Scheduled job heartbeat tick
+2024-01-01T10:11:46 INFO Handling request POST /api/orders
+2024-01-01T10:11:47 INFO Health check passed
+2024-01-01T10:11:48 INFO Request processed successfully
+2024-01-01T10:11:49 INFO Scheduled job heartbeat tick
+2024-01-01T10:11:50 INFO Cache hit for key user:1042
+2024-01-01T10:11:51 INFO Health check passed
+2024-01-01T10:11:52 INFO Cache hit for key user:1042
+2024-01-01T10:11:53 INFO User authenticated successfully
+2024-01-01T10:11:54 INFO Database query completed in 12ms
+2024-01-01T10:11:55 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:11:56 INFO User authenticated successfully
+2024-01-01T10:11:57 INFO Scheduled job heartbeat tick
+2024-01-01T10:11:58 INFO Scheduled job heartbeat tick
+2024-01-01T10:11:59 INFO Health check passed
+2024-01-01T10:12:00 INFO Rate limiter check passed
+2024-01-01T10:12:01 INFO Database query completed in 12ms
+2024-01-01T10:12:02 INFO Request processed successfully
+2024-01-01T10:12:03 INFO Cache miss for key session:889
+2024-01-01T10:12:04 INFO Handling request POST /api/orders
+2024-01-01T10:12:05 INFO Database query completed in 12ms
+2024-01-01T10:12:06 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:07 INFO Cache miss for key session:889
+2024-01-01T10:12:08 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:09 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:12:10 INFO Rate limiter check passed
+2024-01-01T10:12:11 INFO Health check passed
+2024-01-01T10:12:12 INFO Request processed successfully
+2024-01-01T10:12:13 INFO Handling request GET /api/users/{id}
+2024-01-01T10:12:14 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:15 INFO Request processed successfully
+2024-01-01T10:12:16 INFO Cache hit for key user:1042
+2024-01-01T10:12:17 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:18 INFO Cache miss for key session:889
+2024-01-01T10:12:19 INFO Request processed successfully
+2024-01-01T10:12:20 INFO Database query completed in 12ms
+2024-01-01T10:12:21 INFO Request processed successfully
+2024-01-01T10:12:22 INFO Database query completed in 12ms
+2024-01-01T10:12:23 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:12:24 INFO Database query completed in 12ms
+2024-01-01T10:12:25 INFO User authenticated successfully
+2024-01-01T10:12:26 INFO Handling request GET /api/users/{id}
+2024-01-01T10:12:27 INFO User authenticated successfully
+2024-01-01T10:12:28 INFO Cache miss for key session:889
+2024-01-01T10:12:29 INFO Handling request POST /api/orders
+2024-01-01T10:12:30 INFO Cache miss for key session:889
+2024-01-01T10:12:31 INFO Health check passed
+2024-01-01T10:12:32 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:33 INFO User authenticated successfully
+2024-01-01T10:12:34 INFO Cache miss for key session:889
+2024-01-01T10:12:35 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:36 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:37 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:12:38 INFO Handling request GET /api/users/{id}
+2024-01-01T10:12:39 INFO Handling request POST /api/orders
+2024-01-01T10:12:40 INFO Database query completed in 12ms
+2024-01-01T10:12:41 INFO Cache miss for key session:889
+2024-01-01T10:12:42 INFO Health check passed
+2024-01-01T10:12:43 INFO Cache miss for key session:889
+2024-01-01T10:12:44 INFO Database query completed in 12ms
+2024-01-01T10:12:45 INFO Rate limiter check passed
+2024-01-01T10:12:46 INFO Request processed successfully
+2024-01-01T10:12:47 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:48 INFO User authenticated successfully
+2024-01-01T10:12:49 INFO User authenticated successfully
+2024-01-01T10:12:50 INFO Request processed successfully
+2024-01-01T10:12:51 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:12:52 INFO User authenticated successfully
+2024-01-01T10:12:53 INFO Request processed successfully
+2024-01-01T10:12:54 INFO Request processed successfully
+2024-01-01T10:12:55 INFO Scheduled job heartbeat tick
+2024-01-01T10:12:56 INFO Database query completed in 12ms
+2024-01-01T10:12:57 INFO Database query completed in 12ms
+2024-01-01T10:12:58 INFO Database query completed in 12ms
+2024-01-01T10:12:59 INFO Cache miss for key session:889
+2024-01-01T10:13:00 INFO Handling request POST /api/orders
+2024-01-01T10:13:01 INFO Cache miss for key session:889
+2024-01-01T10:13:02 INFO Request processed successfully
+2024-01-01T10:13:03 INFO Handling request POST /api/orders
+2024-01-01T10:13:04 INFO User authenticated successfully
+2024-01-01T10:13:05 WARN Slow query detected: SELECT * FROM orders took 4200ms
+2024-01-01T10:13:06 INFO Cache hit for key user:1042
+2024-01-01T10:13:07 INFO Cache miss for key session:889
+2024-01-01T10:13:08 INFO Cache miss for key session:889
+2024-01-01T10:13:09 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:10 INFO Database query completed in 12ms
+2024-01-01T10:13:11 INFO Rate limiter check passed
+2024-01-01T10:13:12 INFO User authenticated successfully
+2024-01-01T10:13:13 INFO Rate limiter check passed
+2024-01-01T10:13:14 INFO Database query completed in 12ms
+2024-01-01T10:13:15 INFO Handling request POST /api/orders
+2024-01-01T10:13:16 INFO Cache miss for key session:889
+2024-01-01T10:13:17 INFO Database query completed in 12ms
+2024-01-01T10:13:18 INFO Cache miss for key session:889
+2024-01-01T10:13:19 WARN Connection pool nearing capacity (18/20 in use)
+2024-01-01T10:13:20 INFO Cache hit for key user:1042
+2024-01-01T10:13:21 INFO Database query completed in 12ms
+2024-01-01T10:13:22 INFO Handling request GET /api/users/{id}
+2024-01-01T10:13:23 INFO User authenticated successfully
+2024-01-01T10:13:24 INFO Cache hit for key user:1042
+2024-01-01T10:13:25 INFO Database query completed in 12ms
+2024-01-01T10:13:26 INFO Handling request GET /api/users/{id}
+2024-01-01T10:13:27 INFO Handling request GET /api/users/{id}
+2024-01-01T10:13:28 INFO User authenticated successfully
+2024-01-01T10:13:29 INFO Database query completed in 12ms
+2024-01-01T10:13:30 INFO Cache hit for key user:1042
+2024-01-01T10:13:31 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:32 INFO Handling request POST /api/orders
+2024-01-01T10:13:33 WARN Slow query detected: SELECT * FROM orders took 4200ms
+2024-01-01T10:13:34 INFO Handling request GET /api/users/{id}
+2024-01-01T10:13:35 INFO Rate limiter check passed
+2024-01-01T10:13:36 INFO Database query completed in 12ms
+2024-01-01T10:13:37 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:38 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:39 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:40 INFO Request processed successfully
+2024-01-01T10:13:41 INFO Cache hit for key user:1042
+2024-01-01T10:13:42 INFO Handling request GET /api/users/{id}
+2024-01-01T10:13:43 INFO Database query completed in 12ms
+2024-01-01T10:13:44 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:45 INFO Handling request POST /api/orders
+2024-01-01T10:13:46 INFO Handling request POST /api/orders
+2024-01-01T10:13:47 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:13:48 INFO Scheduled job heartbeat tick
+2024-01-01T10:13:49 INFO Handling request POST /api/orders
+2024-01-01T10:13:50 INFO Rate limiter check passed
+2024-01-01T10:13:51 INFO Handling request GET /api/users/{id}
+2024-01-01T10:13:52 INFO Cache hit for key user:1042
+2024-01-01T10:13:53 INFO Cache hit for key user:1042
+2024-01-01T10:13:54 INFO Rate limiter check passed
+2024-01-01T10:13:55 INFO Database query completed in 12ms
+2024-01-01T10:13:56 INFO Handling request POST /api/orders
+2024-01-01T10:13:57 INFO Cache miss for key session:889
+2024-01-01T10:13:58 INFO Handling request POST /api/orders
+2024-01-01T10:13:59 INFO User authenticated successfully
+2024-01-01T10:14:00 INFO Health check passed
+2024-01-01T10:14:01 FATAL Out of memory while processing batch job
+  at BatchProcessor.run(batch_processor.py:77)
+2024-01-01T10:14:02 INFO Rate limiter check passed
+2024-01-01T10:14:03 INFO Rate limiter check passed
+2024-01-01T10:14:04 INFO Cache miss for key session:889
+2024-01-01T10:14:05 INFO User authenticated successfully
+2024-01-01T10:14:06 INFO Health check passed
+2024-01-01T10:14:07 INFO Scheduled job heartbeat tick
+2024-01-01T10:14:08 INFO Scheduled job heartbeat tick
+2024-01-01T10:14:09 INFO Database query completed in 12ms
+2024-01-01T10:14:10 INFO Rate limiter check passed
+2024-01-01T10:14:11 INFO Health check passed
+2024-01-01T10:14:12 INFO Database query completed in 12ms
+2024-01-01T10:14:13 INFO Rate limiter check passed
+2024-01-01T10:14:14 INFO Rate limiter check passed
+2024-01-01T10:14:15 ERROR Failed to connect to payment gateway: ConnectionTimeoutError
+  at PaymentClient.connect(payment_client.py:88)
+  at OrderService.charge(order_service.py:142)
+  at main.handle_request(main.py:55)
+2024-01-01T10:14:16 INFO Rate limiter check passed
+2024-01-01T10:14:17 INFO Handling request POST /api/orders
+2024-01-01T10:14:18 INFO Cache miss for key session:889
+2024-01-01T10:14:19 INFO Cache miss for key session:889
+2024-01-01T10:14:20 INFO Database query completed in 12ms
+2024-01-01T10:14:21 INFO Handling request POST /api/orders
+2024-01-01T10:14:22 INFO Cache hit for key user:1042
+2024-01-01T10:14:23 INFO Cache miss for key session:889
+2024-01-01T10:14:24 INFO Cache hit for key user:1042
+2024-01-01T10:14:25 INFO User authenticated successfully
+2024-01-01T10:14:26 INFO Handling request POST /api/orders
+2024-01-01T10:14:27 INFO Cache hit for key user:1042
+2024-01-01T10:14:28 INFO Handling request GET /api/users/{id}
+2024-01-01T10:14:29 ERROR Database write failed: deadlock detected
+  at DBClient.write(db_client.py:201)
+  at OrderService.save(order_service.py:160)
+2024-01-01T10:14:30 INFO Scheduled job heartbeat tick
+2024-01-01T10:14:31 INFO Rate limiter check passed
+2024-01-01T10:14:32 INFO Scheduled job heartbeat tick
+2024-01-01T10:14:33 INFO Database query completed in 12ms
+2024-01-01T10:14:34 INFO Handling request GET /api/users/{id}
+2024-01-01T10:14:35 INFO Cache miss for key session:889
+2024-01-01T10:14:36 INFO Database query completed in 12ms
+2024-01-01T10:14:37 INFO Database query completed in 12ms
+2024-01-01T10:14:38 INFO Scheduled job heartbeat tick
+2024-01-01T10:14:39 INFO Handling request POST /api/orders
+2024-01-01T10:14:40 INFO Cache miss for key session:889
+2024-01-01T10:14:41 INFO Database query completed in 12ms
+2024-01-01T10:14:42 INFO Rate limiter check passed
+2024-01-01T10:14:43 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:14:44 INFO Cache miss for key session:889
+2024-01-01T10:14:45 INFO Health check passed
+2024-01-01T10:14:46 INFO Handling request POST /api/orders
+2024-01-01T10:14:47 INFO User authenticated successfully
+2024-01-01T10:14:48 INFO Cache miss for key session:889
+2024-01-01T10:14:49 INFO Cache hit for key user:1042
+2024-01-01T10:14:50 INFO Database query completed in 12ms
+2024-01-01T10:14:51 INFO Cache hit for key user:1042
+2024-01-01T10:14:52 INFO Handling request POST /api/orders
+2024-01-01T10:14:53 INFO Handling request GET /api/users/{id}
+2024-01-01T10:14:54 INFO Cache hit for key user:1042
+2024-01-01T10:14:55 INFO Database query completed in 12ms
+2024-01-01T10:14:56 INFO Rate limiter check passed
+2024-01-01T10:14:57 CRITICAL Disk usage at 98% on /var/log partition
+2024-01-01T10:14:58 INFO Rate limiter check passed
