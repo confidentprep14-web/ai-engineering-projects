@@ -9,3 +9,4 @@ venv/
 .index/
 *.db
 cdk.out/
+.coverage
