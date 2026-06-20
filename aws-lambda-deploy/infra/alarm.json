@@ -1,0 +1,20 @@
+{
+  "AlarmName": "chat-api-lambda-error-rate",
+  "AlarmDescription": "Alert if error rate exceeds 5% in 5 minutes",
+  "MetricName": "Errors",
+  "Namespace": "AWS/Lambda",
+  "Dimensions": [
+    {
+      "Name": "FunctionName",
+      "Value": "chat-api-lambda"
+    }
+  ],
+  "Statistic": "Sum",
+  "Period": 300,
+  "Threshold": 5,
+  "ComparisonOperator": "GreaterThanThreshold",
+  "EvaluationPeriods": 1,
+  "AlarmActions": [
+    "arn:aws:sns:us-east-1:123456789012:chat-api-alerts"
+  ]
+}
