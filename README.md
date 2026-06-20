@@ -30,6 +30,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Dockerize Your App](dockerize-llm-app/) 🟡
 - [x] [Deploy to AWS Lambda](aws-lambda-deploy/) 🔴
 - [x] [Full AI Assistant (Capstone)](ai-assistant-capstone/) 🔴
+- [x] [Docs Copilot](docs-copilot/) 🟡
 
 More projects land one at a time, fully built and tested before merge.
 
