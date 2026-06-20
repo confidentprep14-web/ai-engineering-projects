@@ -1,0 +1,10 @@
+{
+  "number": 42,
+  "title": "Switch to PostgreSQL for better JSONB support",
+  "body": "After evaluating MySQL and PostgreSQL for our analytics workload, we need native JSONB columns with indexing. MySQL's JSON support is comparatively limited and we're already running Postgres for two other services.",
+  "comments": [
+    {"body": "Agreed, we should use PostgreSQL. JSONB with GIN indexes will let us query event payloads without a separate schema migration every time we add a field."},
+    {"body": "+1, also gets us native full-text search later if we need it."}
+  ],
+  "closed_at": "2024-01-15T10:00:00Z"
+}

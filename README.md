@@ -22,6 +22,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [LLM Test Generator](llm-test-generator/) 🟢
 - [x] [LLM Observability](llm-observability/) 🟡
 - [x] [Incident Summariser](incident-summariser/) 🟢
+- [x] [Team Knowledge Extractor](team-knowledge-extractor/) 🟢
 - [x] [Local to SageMaker](local-to-sagemaker/) 🟡
 - [x] [Data Exploration](data-exploration/) 🟢
 - [x] [Feature Engineering](feature-engineering/) 🟡

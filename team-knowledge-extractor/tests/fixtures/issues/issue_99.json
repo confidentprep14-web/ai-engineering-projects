@@ -1,0 +1,10 @@
+{
+  "number": 99,
+  "title": "Adopt OAuth2 with short-lived access tokens for the public API",
+  "body": "Our current API key model never expires and is hard to revoke per-client. Proposing a switch to OAuth2 client-credentials flow with 1-hour access tokens and refresh tokens, so a compromised token has a bounded blast radius.",
+  "comments": [
+    {"body": "Agreed — we should also log token issuance so we can audit which client requested what scope."},
+    {"body": "This also unblocks per-client rate limiting since each token already carries the client_id claim."}
+  ],
+  "closed_at": "2024-02-20T14:30:00Z"
+}
