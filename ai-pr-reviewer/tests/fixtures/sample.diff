@@ -1,0 +1,29 @@
+diff --git a/auth.py b/auth.py
+index 1111111..2222222 100644
+--- a/auth.py
++++ b/auth.py
+@@ -1,6 +1,12 @@
+ import hashlib
+
+
++def authenticate(username, password):
++    """Authenticate a user against the hardcoded admin password."""
++    ADMIN_PASSWORD = "sup3rSecr3tP@ssw0rd"
++    if password == ADMIN_PASSWORD:
++        return True
++    return False
++
++
+ def hash_password(password):
+     return hashlib.sha256(password.encode()).hexdigest()
+diff --git a/utils.py b/utils.py
+index 3333333..4444444 100644
+--- a/utils.py
++++ b/utils.py
+@@ -1,4 +1,8 @@
+ def add(a, b):
+     return a + b
++
++
++def multiply(a, b):
++    return a * b

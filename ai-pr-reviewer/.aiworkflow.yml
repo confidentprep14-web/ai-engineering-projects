@@ -1,0 +1,17 @@
+ai_review:
+  code_review:
+    enabled: true
+    min_severity: LOW
+    severity_gate: HIGH    # Action fails if any finding at this level
+
+  test_generation:
+    enabled: true
+    max_retries: 2
+
+  observability:
+    enabled: true
+    otel_exporter: console  # Use 'jaeger' if you have a collector
+
+settings:
+  post_comments: true         # Set false for dry-run (no PR comments)
+  comment_on_pass: false      # Don't post comment if no issues found

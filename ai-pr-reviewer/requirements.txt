@@ -1,0 +1,12 @@
+anthropic==0.30.0
+openai==1.35.0
+PyGithub==2.5.0
+opentelemetry-sdk==1.25.0
+opentelemetry-api==1.25.0
+opentelemetry-exporter-otlp-proto-grpc==1.25.0
+python-dotenv==1.0.1
+rich==13.7.1
+pytest==8.2.2
+pytest-mock==3.14.0
+pyyaml==6.0.1
+tabulate==0.9.0
