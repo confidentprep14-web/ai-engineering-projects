@@ -23,6 +23,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Data Exploration](data-exploration/) 🟢
 - [x] [Feature Engineering](feature-engineering/) 🟡
 - [x] [Manual Versioning](manual-versioning/) 🟢
+- [x] [Dockerize Your App](dockerize-llm-app/) 🟡
 
 More projects land one at a time, fully built and tested before merge.
 
