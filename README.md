@@ -34,6 +34,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [SQL Agent](sql-agent/) 🟡
 - [x] [AI CLI Toolkit](ai-cli-toolkit/) 🟡
 - [x] [AI PR Reviewer (Capstone)](ai-pr-reviewer/) 🔴
+- [x] [Experiment Tracking](experiment-tracking/) 🟢
 
 More projects land one at a time, fully built and tested before merge.
 
