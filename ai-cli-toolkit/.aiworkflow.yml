@@ -1,0 +1,23 @@
+tools:
+  review:
+    enabled: true
+    description: "Code review — finds security, performance, correctness, and style issues in a git diff"
+    min_severity: LOW
+
+  explain:
+    enabled: true
+    description: "PR summarizer — plain-English summary, architecture impact, and test coverage flag"
+
+  search:
+    enabled: true
+    description: "Semantic codebase search — find functions by meaning, not just keyword"
+    index_dir: .index
+
+  query:
+    enabled: true
+    description: "Natural language to SQL — ask questions about your database in plain English"
+    db_path: ecommerce.db
+
+settings:
+  default_output: table
+  max_retries: 3

@@ -32,6 +32,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Full AI Assistant (Capstone)](ai-assistant-capstone/) 🔴
 - [x] [Docs Copilot](docs-copilot/) 🟡
 - [x] [SQL Agent](sql-agent/) 🟡
+- [x] [AI CLI Toolkit](ai-cli-toolkit/) 🟡
 
 More projects land one at a time, fully built and tested before merge.
 
