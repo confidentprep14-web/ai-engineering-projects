@@ -1,0 +1,6 @@
+{
+  "accuracy": 0.861,
+  "auc": 0.871,
+  "n_samples": 200,
+  "endpoint_name": "p3-07-adult-income-endpoint"
+}

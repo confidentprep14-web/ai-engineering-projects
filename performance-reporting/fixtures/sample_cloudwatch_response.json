@@ -1,0 +1,8 @@
+{
+  "endpoint_name": "p3-07-adult-income-endpoint",
+  "period_days": 7,
+  "invocation_count": 842,
+  "model_latency_p50_ms": 23.4,
+  "error_count": 3,
+  "error_rate": 0.0036
+}
