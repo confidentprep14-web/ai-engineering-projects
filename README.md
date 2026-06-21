@@ -37,6 +37,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [Experiment Tracking](experiment-tracking/) 🟢
 - [x] [Batch Inference](batch-inference/) 🔴
 - [x] [Model Serving](model-serving/) 🔴
+- [x] [A/B Testing](ab-testing/) 🔴
 
 More projects land one at a time, fully built and tested before merge.
 
