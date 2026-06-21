@@ -40,6 +40,7 @@ Complexity key: 🟢 runs locally with one API key (or Ollama for zero cost) · 
 - [x] [A/B Testing](ab-testing/) 🔴
 - [x] [Performance Reporting](performance-reporting/) 🔴
 - [x] [Model Monitoring](model-monitoring/) 🔴
+- [x] [Retraining Pipeline](retraining-pipeline/) 🔴
 
 More projects land one at a time, fully built and tested before merge.
 
