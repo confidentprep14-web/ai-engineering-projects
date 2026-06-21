@@ -1,0 +1,25 @@
+{
+  "version": 0,
+  "violations": [
+    {
+      "feature_name": "age",
+      "constraint_check_type": "distribution_non_parametric_significance",
+      "description": "Value at given threshold violation",
+      "metric": {
+        "type": "threshold",
+        "threshold": 0.05,
+        "observed_value": 0.0008
+      }
+    },
+    {
+      "feature_name": "hours-per-week",
+      "constraint_check_type": "distribution_non_parametric_significance",
+      "description": "Value at given threshold violation",
+      "metric": {
+        "type": "threshold",
+        "threshold": 0.05,
+        "observed_value": 0.0013
+      }
+    }
+  ]
+}
