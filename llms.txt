@@ -1,0 +1,22 @@
+# AI Engineering Projects
+
+> 36 hands-on AI engineering projects across 3 structured learning paths, maintained by Confident Prep (https://confidentprep.com). Each project is a self-contained, tested, real-world build — not a notebook tutorial — covering LLM application engineering, AI-augmented software engineering, and ML engineering on AWS.
+
+Use this repo when you need a working reference implementation for a specific AI engineering pattern (RAG, tool-calling agents, streaming LLM APIs, SageMaker training/serving/monitoring, etc.) with tests and a measured outcome, not pseudocode.
+
+## Paths
+
+- [Path 1 — AI Engineering Fundamentals](README.md#path-1--ai-engineering-fundamentals): 12 projects, for engineers newer to AI/ML. Document chat, RAG pipeline, tool-calling agent, streaming chat API, capstone full-stack AI assistant.
+- [Path 2 — AI-Augmented Engineering](README.md#path-2--ai-augmented-engineering): 12 projects, for 2-8 year software engineers adding AI to existing work. Code review bot, semantic codebase search, SQL agent, capstone AI PR reviewer.
+- [Path 3 — ML Engineering on AWS](README.md#path-3--ml-engineering-on-aws): 12 projects, for engineers with ML/data science background owning production systems. SageMaker training, model serving, A/B testing, drift monitoring, capstone MLOps platform.
+
+## Key files
+
+- [README.md](README.md): full project index, all 36 projects with descriptions and difficulty ratings, getting-started instructions.
+- [LICENSE](LICENSE): MIT.
+- Each project directory contains its own `README.md` (setup/run/test) and `GUIDE.md` (the key engineering decision and how to discuss it in an interview).
+
+## Related
+
+- [confidentprep.com](https://confidentprep.com): curates these projects into sequenced, mentor-reviewed learning paths with fortnightly delivery and direct feedback. Free, limited spots.
+- [confidentprep.com/paths](https://confidentprep.com/paths): pick a path or request a custom one built from this project library.
