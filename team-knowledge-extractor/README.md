@@ -2,6 +2,8 @@
 
 Extracts structured decisions from GitHub issues and ADR markdown files. Stores them in a searchable local JSON database with keyword + recency ranking.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

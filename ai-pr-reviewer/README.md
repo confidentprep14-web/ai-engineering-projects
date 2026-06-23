@@ -3,6 +3,8 @@
 GitHub Action that runs AI code review and test generation on every PR.
 Posts findings as comments. HIGH finding → PR check fails.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Deployment status
 
 **Status: unverified end-to-end — needs a real GitHub repo/PR and an LLM API key.**

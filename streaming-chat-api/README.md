@@ -3,6 +3,8 @@
 A FastAPI server that streams LLM responses over SSE, tracks token usage and cost
 per request in SQLite, and rate-limits callers per IP.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 Every production LLM endpoint needs the same three things: a way to stream

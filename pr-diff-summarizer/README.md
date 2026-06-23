@@ -5,6 +5,8 @@ Turns a git diff into three audience-aware outputs:
 - An architecture impact paragraph for engineering managers
 - A test coverage flag when tests are absent from the diff
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

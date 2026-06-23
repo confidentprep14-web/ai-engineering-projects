@@ -2,6 +2,8 @@
 
 A unified `ai` command that dispatches to AI engineering tools. Plugin architecture — add a new tool by adding one file to `tools/`.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

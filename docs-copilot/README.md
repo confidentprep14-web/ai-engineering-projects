@@ -2,6 +2,8 @@
 
 RAG-based documentation assistant with section-level citations, freshness tracking, and an "I don't know" threshold.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

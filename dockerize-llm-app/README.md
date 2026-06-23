@@ -3,6 +3,8 @@
 Packages the streaming chat API into a Docker container with a persistent SQLite
 volume and health check. Runs identically on any machine with Docker installed.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Prerequisites
 
 - Docker Desktop (https://www.docker.com/products/docker-desktop/)

@@ -4,6 +4,8 @@ A test harness for LLM prompts. Define test cases in YAML, score responses with
 an LLM judge across multiple dimensions, and get exit code 1 on failure — so you
 can run it in CI.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Setup
 
 ```bash

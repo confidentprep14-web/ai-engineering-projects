@@ -2,6 +2,8 @@
 
 Deploy two model variants behind one SageMaker endpoint. Shift traffic. Pick the winner.
 
+> Part of [Path 3 — ML Engineering on AWS](https://confidentprep.com/paths/path-3) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## WARNING
 
 This project creates a SageMaker endpoint with TWO instances (~$0.11/hr total).

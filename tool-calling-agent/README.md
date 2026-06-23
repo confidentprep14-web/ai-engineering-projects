@@ -3,6 +3,8 @@
 An agent that uses tools — calculator, datetime, and Wikipedia — to answer questions
 it can't answer from training alone, with a reasoning trace and max-iterations guard.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 Project 5 ran a fixed sequence of LLM calls. This one hands the LLM a registry of

@@ -2,6 +2,8 @@
 
 CLI that reads a git diff and returns structured code-review findings.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

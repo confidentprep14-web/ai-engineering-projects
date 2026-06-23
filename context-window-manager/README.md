@@ -4,6 +4,8 @@ A multi-turn CLI chatbot that handles context window limits with two strategies 
 sliding window and summarisation compression — and shows you exactly what each
 approach loses.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 Every multi-turn LLM conversation eventually hits the context window limit. This

@@ -4,6 +4,8 @@ A deployed AI assistant combining RAG over uploaded documents, tool use for live
 context window management, and streaming responses — with an eval suite that runs
 against the live endpoint.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Deployment status
 
 **Status: partially verified locally — needs AWS credentials and an LLM API key for

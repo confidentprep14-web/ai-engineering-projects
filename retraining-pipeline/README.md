@@ -2,6 +2,8 @@
 
 Automated ML pipeline: S3 upload → preprocess → train → evaluate → conditional deploy.
 
+> Part of [Path 3 — ML Engineering on AWS](https://confidentprep.com/paths/path-3) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Architecture
 
 ```

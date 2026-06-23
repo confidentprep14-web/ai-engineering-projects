@@ -2,6 +2,8 @@
 
 Reads Python files with AST, extracts function signatures and type hints, and generates a README with LLM-written documentation for every public function.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

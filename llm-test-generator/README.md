@@ -2,6 +2,8 @@
 
 Generates pytest test cases for Python functions using LLM, then validates them by actually running pytest — retrying with error context on failure.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

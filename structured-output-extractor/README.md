@@ -4,6 +4,8 @@ Extracts structured data from unstructured text — job postings, meeting notes,
 support tickets — into validated Pydantic objects, with automatic retry when
 the LLM returns malformed JSON.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 LLM output is untrusted input: it can arrive as near-JSON, JSON wrapped in a

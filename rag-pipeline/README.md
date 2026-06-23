@@ -4,6 +4,8 @@ Embeds a folder of documents into a persistent FAISS index and answers questions
 retrieving semantically relevant chunks, with score-threshold filtering and an A/B
 mode that puts RAG and no-RAG answers side by side.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 A retrieval-augmented generation pipeline: documents are split into overlapping

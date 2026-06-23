@@ -2,6 +2,8 @@
 
 OpenTelemetry-based observability wrapper for LLM calls. Records model, tokens, latency, and cost per call. Flags anomalies. Exports to terminal dashboard or Jaeger.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

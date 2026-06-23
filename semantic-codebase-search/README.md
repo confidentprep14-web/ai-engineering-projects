@@ -2,6 +2,8 @@
 
 Function-level semantic search over your codebase using local embeddings and FAISS.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

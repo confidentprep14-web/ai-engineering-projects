@@ -3,6 +3,8 @@
 A 3-stage pipeline that extracts entities from any topic, enriches them with
 live Wikipedia data, and synthesises a professional briefing document.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 Most useful AI features are not one LLM call — they are a fixed sequence of

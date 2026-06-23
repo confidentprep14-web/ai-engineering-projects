@@ -2,6 +2,8 @@
 
 Natural language → SQL → plain English. Uses parser-based SQL validation (sqlglot AST) and a self-correcting retry loop.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

@@ -2,6 +2,8 @@
 
 Converts noisy log files (up to 100MB) into structured incident reports with timeline, root cause, and action items — using pre-filtering to reduce token usage before any LLM call.
 
+> Part of [Path 2 — AI-Augmented Engineering](https://confidentprep.com/paths/path-2) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Quick start
 
 ```bash

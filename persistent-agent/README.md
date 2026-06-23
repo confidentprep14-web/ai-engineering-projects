@@ -4,6 +4,8 @@ A CLI chatbot that remembers you. It stores conversation history and key facts
 in SQLite and recalls them across sessions — your name, preferences, and past
 context are available every time you return.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## What this is
 
 Most CLI chatbot demos forget everything the moment the process exits. This one

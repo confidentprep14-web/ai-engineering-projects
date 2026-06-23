@@ -2,6 +2,8 @@
 
 Deploy a real-time SageMaker endpoint, benchmark latency (p50/p95/p99), and measure cold start.
 
+> Part of [Path 3 — ML Engineering on AWS](https://confidentprep.com/paths/path-3) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## WARNING
 
 This project creates a SageMaker endpoint that costs ~$0.056/hour (ml.t2.medium).

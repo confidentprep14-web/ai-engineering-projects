@@ -3,6 +3,8 @@
 A CLI tool that loads a PDF or text file and answers questions about it,
 with streaming output and exact source citations for every answer.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Setup
 
 ```bash

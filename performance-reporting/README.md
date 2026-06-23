@@ -2,6 +2,8 @@
 
 Weekly model performance report: CloudWatch metrics + live evaluation + MLflow baseline.
 
+> Part of [Path 3 — ML Engineering on AWS](https://confidentprep.com/paths/path-3) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Prerequisites
 
 - Python 3.11+

@@ -4,6 +4,8 @@ Packages the streaming chat API as a Lambda-compatible container image, deploys 
 with a least-privilege IAM role and API Gateway, stores secrets in Secrets Manager,
 and measures cold start latency.
 
+> Part of [Path 1 — AI Engineering Fundamentals](https://confidentprep.com/paths/path-1) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## Deployment status
 
 **Status: unverified — needs AWS credentials.** This project was built and tested in

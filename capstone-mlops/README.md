@@ -2,6 +2,8 @@
 
 Wire p3-07 through p3-11 into a complete, observable MLOps system.
 
+> Part of [Path 3 — ML Engineering on AWS](https://confidentprep.com/paths/path-3) on Confident Prep — see the full curriculum and how this project fits in.
+
 ## WARNING
 
 This project runs ALL components simultaneously. Combined cost: ~$5-10 for a 2-hour session.
